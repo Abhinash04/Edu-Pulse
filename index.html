@@ -21,6 +21,21 @@
     <!-- Tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "thirty-pr-color": "#3b82f6",
+              "ten-pr-color": "#f59e0b",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
 
     <!-- custom css -->
     <link rel="stylesheet" href="styles1.css" />
@@ -109,7 +124,7 @@
                     type="text"
                     name=""
                     id=""
-                    placeholder="Try Desk, Chair, Webcam etc..."
+                    placeholder="Try IT, CSE, DAA etc..."
                     class="block w-full py-3 pl-10 pr-4 text-base font-normal leading-7 text-gray-900 placeholder-gray-500 bg-white border border-white focus:ring-white focus:border-white focus:ring-offset-2"
                   />
                 </div>
@@ -296,7 +311,7 @@
           >
             <div class="p-4">
               <img
-                src="/placeholder.svg?height=200&width=200"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwygM2pe9X6WrCehJgJg1Eskef9KYsvCT7zg&s"
                 alt="IT"
                 class="w-full h-48 object-cover mb-4"
               />
@@ -371,132 +386,95 @@
     </section>
 
     <!-- Why Choose Us -->
-    <div class="why-edupulse-container" id="why-edupulse-container">
-      <h2 class="why-edupulse-heading">Why <span>Choose Us?</span></h2>
-      <div class="why-edupulse-container-content">
-        <div class="why-edupulse-container-side">
-          <div class="why-edupulse-container-leftside-top why-edupulse-shadow">
-            <div class="why-edupulse-container-top">
-              <img
-                width="48"
-                height="48"
-                src="https://img.icons8.com/emoji/48/fire.png"
-                alt="fire"
-              />
-              <strong>Effective and Efficient</strong>
-            </div>
-            <div>
-              <p>
-                Our study material effectively and efficiently teaches reading
-                and learning. Check more courses.
-              </p>
-            </div>
-          </div>
-          <div
-            class="why-edupulse-container-leftside-bottom why-edupulse-shadow"
-          >
-            <div class="why-edupulse-container-top">
-              <img
-                width="35"
-                height="35"
-                src="https://img.icons8.com/3d-fluency/94/checkmark.png"
-                alt="checkmark"
-              />
-              <strong>Personalized Learning</strong>
-            </div>
-            <div>
-              <p>
-                Combining the best study material, lessons are tailored to help
-                you learn at just the right level and pace.
-              </p>
-            </div>
-          </div>
+    <div
+      class="max-w-7xl mx-auto mt-10 p-6 text-center"
+      id="why-edupulse-container"
+    >
+      <h2 class="text-2xl font-bold">
+        Why <span class="text-blue-600">Choose us?</span>
+      </h2>
+      <div class="flex flex-col lg:flex-row justify-between gap-3 mt-6">
+        <!-- Left side: Image and content -->
+        <div class="flex flex-col items-center lg:items-start lg:flex-[2]">
+          <img
+            class="w-64 mb-4 lg:mb-0"
+            src="assets/images/kid.png"
+            alt="Kid image"
+          />
         </div>
-        <div class="why-edupulse-container-centerimage">
-          <img src="assets/images/kid.png" alt="kid-studying-in-edupulse" />
-        </div>
-        <div class="why-edupulse-container-side">
-          <div class="why-edupulse-container-rightside-top why-edupulse-shadow">
-            <div class="why-edupulse-container-top">
-              <img
-                width="48"
-                height="48"
-                src="https://img.icons8.com/emoji/48/crown-emoji.png"
-                alt="crown-emoji"
-              />
-              <strong>Stay Motivated</strong>
-            </div>
-            <div>
-              <p>
-                Stay motivated in education. Knowledge is power, unlocking
-                opportunities and your full potential.
-              </p>
-            </div>
+
+        <!-- Right side: Content grid -->
+        <div class="flex-[3] grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div class="p-4 border-l-4 border-blue-500">
+            <h3 class="text-blue-600 font-bold">Organised study material</h3>
+            <p class="mt-2">
+              categorized notes and resources, ensuring students can find what
+              they need quickly, saving valuable study time.
+            </p>
           </div>
-          <div
-            class="why-edupulse-container-rightside-bottom why-edupulse-shadow"
-          >
-            <div class="why-edupulse-container-top">
-              <img
-                width="45"
-                height="45"
-                src="https://img.icons8.com/3d-fluency/94/hard-working.png"
-                alt="hard-working"
-              />
-              <strong>Have fun with edupulse</strong>
-            </div>
-            <div>
-              <p>
-                Effective learning doesn’t have to be boring! Complete your
-                syllabus each day with edupulse.
-              </p>
-            </div>
+          <div class="p-4 border-l-4 border-blue-500">
+            <h3 class="text-blue-600 font-bold">Accessible Anytime Anywhere</h3>
+            <p class="mt-2">
+              our platform is accessible across devices, ensuring you can study
+              whenever it’s convenient for you.
+            </p>
+          </div>
+          <div class="p-4 border-l-4 border-blue-500">
+            <h3 class="text-blue-600 font-bold">Regularly Updated Content</h3>
+            <p class="mt-2">
+              Stay ahead with notes that are constantly updated to reflect the
+              latest academic curriculum and exam patterns.
+            </p>
+          </div>
+          <div class="p-4 border-l-4 border-blue-500">
+            <h3 class="text-blue-600 font-bold">Support multiple subjects:</h3>
+            <p class="mt-2">
+              we offer resources across a range of subjects, helping you excel
+              in your studies.
+            </p>
           </div>
         </div>
       </div>
     </div>
 
     <!-- About Section -->
-    <section class="about-us-container" id="about-us-container">
-      <h1 class="about-us-heading"><span>About</span> Us</h1>
-      <div class="about-us-content">
-        <h1>About <span>EduPulse</span></h1>
-        <p>
-          EduPulse is an educational portal that caters to the needs of students
-          by offering concise handwritten notes, effective exam preparation
-          materials, previous year question papers, and important topics for
-          exams. It provides comprehensive explanations in a well-understood
-          format for subjects covered in the syllabus.
-        </p>
-      </div>
-      <div class="about-us-content">
-        <h1>Why this <span>Project</span></h1>
-        <p>
-          The objective of EduPulse is to address the challenges faced by
-          students in their academic journey. By providing concise handwritten
-          notes, relevant study material, and previous year's question papers,
-          EduPulse ensures that students have access to high-quality resources
-          in a convenient manner. It aims to enhance their understanding and
-          retention of the subject matter.
-        </p>
-      </div>
-      <div class="about-us-content">
-        <h1>Our <span>Ideology</span></h1>
-        <p>
-          EduPulse's website is a one-stop solution for students seeking
-          comprehensive study resources. It simplifies finding reliable
-          materials, saving students valuable time and effort. The website's
-          user-friendly interface and organized structure facilitate easy
-          navigation and efficient learning. Students can benefit from organized
-          resources, improved understanding, and enhanced academic performance,
-          ultimately leading to their success.
-        </p>
-      </div>
-    </section>
+<section id="about-us-container" class="mt-12 flex flex-col p-8 gap-12">
+    <h1 class="text-3xl font-extrabold text-center font-poppins text-[var(--thirty-pr-color)]">
+      <span class="text-[var(--ten-pr-color)]">About</span> Us
+    </h1>
+  
+    <div class="about-us-content mx-auto flex flex-col gap-4 p-6 shadow-lg text-[var(--thirty-pr-color)] transition-all duration-700 ease-in-out hover:shadow-xl">
+      <h1 class="text-xl font-rubik">
+        About <span class="text-[var(--ten-pr-color)]">EduPulse</span>
+      </h1>
+      <p class="text-base font-quicksand font-medium">
+        EduPulse is an educational portal that caters to the needs of students by offering concise handwritten notes, effective exam preparation materials, previous year question papers, and important topics for exams. It provides comprehensive explanations in a well-understood format for subjects covered in the syllabus.
+      </p>
+    </div>
+  
+    <div class="about-us-content mx-auto flex flex-col gap-4 p-6 shadow-lg text-[var(--thirty-pr-color)] transition-all duration-700 ease-in-out hover:shadow-xl">
+      <h1 class="text-xl font-rubik">
+        Why this <span class="text-[var(--ten-pr-color)]">Project</span>
+      </h1>
+      <p class="text-base font-quicksand font-medium">
+        The objective of EduPulse is to address the challenges faced by students in their academic journey. By providing concise handwritten notes, relevant study material, and previous year's question papers, EduPulse ensures that students have access to high-quality resources in a convenient manner. It aims to enhance their understanding and retention of the subject matter.
+      </p>
+    </div>
+  
+    <div class="about-us-content mx-auto flex flex-col gap-4 p-6 shadow-lg text-[var(--thirty-pr-color)] transition-all duration-700 ease-in-out hover:shadow-xl">
+      <h1 class="text-xl font-rubik">
+        Our <span class="text-[var(--ten-pr-color)]">Ideology</span>
+      </h1>
+      <p class="text-base font-quicksand font-medium">
+        EduPulse's website is a one-stop solution for students seeking comprehensive study resources. It simplifies finding reliable materials, saving students valuable time and effort. The website's user-friendly interface and organized structure facilitate easy navigation and efficient learning. Students can benefit from organized resources, improved understanding, and enhanced academic performance, ultimately leading to their success.
+      </p>
+    </div>
+  </section>
+  
 
     <!-- Contact Section -->
     <section
-      class="contact py-16 px-4 md:px-8 lg:px-16 bg-gray-50"
+      class="contact py-16 px-4 md:px-8 lg:px-16 bg-[#f1f1f1]"
       id="contact"
     >
       <div class="max-w-7xl mx-auto">
