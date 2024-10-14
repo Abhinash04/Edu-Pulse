@@ -1,11 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educational Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <header class="header visible bg-white shadow-sm" id="home-header">
+      <nav class="navbar bg-cream flex justify-between items-center px-4 py-4">
+        <div class="logo flex items-center">
+          <div class="square bg-blue-600 h-8 w-8 mr-2"></div>
+          <a href="index.html#home">
+            <h4 class="text-blue-600 font-bold text-xl">EduPulse</h4>
+          </a>
+        </div>
+        <a
+          href="index.html#home"
+          class="flex items-center px-4 py-2 text-gray-600 hover:text-blue-600"
+        >
+          <svg
+            class="mr-2 h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 12h18M3 6h18M3 18h18"
+            ></path>
+          </svg>
+          Home
+        </a>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div class="relative">
+          <input
+            id="department-input"
+            type="text"
+            placeholder="Department"
+            class="w-full border border-gray-300 rounded-md p-2"
+          />
+          <ul
+            id="department-suggestions"
+            class="absolute z-10 w-full bg-white border border-gray-300 rounded-md mt-1 max-h-40 overflow-auto hidden"
+          ></ul>
+        </div>
+        <div class="relative">
+          <input
+            id="semester-input"
+            type="text"
+            placeholder="Semester"
+            class="w-full border border-gray-300 rounded-md p-2"
+          />
+          <ul
+            id="semester-suggestions"
+            class="absolute z-10 w-full bg-white border border-gray-300 rounded-md mt-1 max-h-40 overflow-auto hidden"
+          ></ul>
+        </div>
+        <div class="relative">
+          <input
+            id="subject-input"
+            type="text"
+            placeholder="Subject or Course Code"
+            class="w-full border border-gray-300 rounded-md p-2"
+          />
+          <ul
+            id="subject-suggestions"
+            class="absolute z-10 w-full bg-white border border-gray-300 rounded-md mt-1 max-h-40 overflow-auto hidden"
+          ></ul>
+        </div>
+      </div>
+
+      <div
+        id="subject-cards"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        <!-- Subject cards will be dynamically inserted here -->
+      </div>
+    </main>
+
+    <script>
+      const subjects = [
+        {
+          id: 1,
+          title: "Mathematics 1",
+          code: "MATH101",
+          department: "Mathematics",
+          semester: "First",
+          image: "/placeholder.svg?height=100&width=200",
+          driveLink: "https://drive.google.com",
+        },
+        {
+          id: 2,
+          title: "Mathematics 2",
+          code: "MATH102",
+          department: "Mathematics",
+          semester: "Second",
+          image: "/placeholder.svg?height=100&width=200",
+          driveLink: "https://drive.google.com",
+        },
+        {
+          id: 3,
+          title: "Mathematics 3",
+          code: "MATH103",
+          department: "Mathematics",
+          semester: "Third",
+          image: "/placeholder.svg?height=100&width=200",
+          driveLink: "https://drive.google.com",
+        },
+        {
+          id: 4,
+          title: "Discrete Mathematics",
+          code: "MATH104",
+          department: "Mathematics",
+          semester: "Fourth",
+          image: "/placeholder.svg?height=100&width=200",
+          driveLink: "https://drive.google.com",
+        },
+        {
+          id: 5,
+          title: "Chemistry",
+          code: "CHEM101",
+          department: "Chemistry",
+          semester: "First",
+          image: "/placeholder.svg?height=100&width=200",
+          driveLink: "https://drive.google.com",
+        },
+        {
+          id: 6,
+          title: "Physics",
+          code: "PHY101",
+          department: "Physics",
+          semester: "Second",
+          image: "/placeholder.svg?height=100&width=200",
+          driveLink: "https://drive.google.com",
+        },
+      ];
+
+      function filterSubjects(department, semester, subject) {
+        return subjects.filter(
+          (s) =>
+            s.department.toLowerCase().includes(department.toLowerCase()) &&
+            s.semester.toLowerCase().includes(semester.toLowerCase()) &&
+            (s.title.toLowerCase().includes(subject.toLowerCase()) ||
+              s.code.toLowerCase().includes(subject.toLowerCase()))
+        );
+      }
+
+      function handleInputChange(input, suggestionsId, field) {
+        const value = input.value.toLowerCase();
+        const suggestions = Array.from(
+          new Set(subjects.map((s) => s[field].toLowerCase()))
+        ).filter((v) => v.includes(value));
+        const suggestionsList = document.getElementById(suggestionsId);
+
+        suggestionsList.innerHTML = suggestions
+          .map(
+            (suggestion) =>
+              `<li class="px-4 py-2 hover:bg-blue-100 cursor-pointer">${suggestion}</li>`
+          )
+          .join("");
+        suggestionsList.classList.toggle("hidden", suggestions.length === 0);
+
+        // Add click event listener to suggestions
+        const suggestionItems = suggestionsList.querySelectorAll("li");
+        suggestionItems.forEach((item) => {
+          item.addEventListener("click", () => {
+            input.value = item.textContent;
+            suggestionsList.classList.add("hidden"); // Hide suggestions after selection
+            renderCards();
+          });
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const departmentInput = document.getElementById("department-input");
+        const semesterInput = document.getElementById("semester-input");
+        const subjectInput = document.getElementById("subject-input");
+        const subjectCards = document.getElementById("subject-cards");
+
+        departmentInput.addEventListener("input", () =>
+          handleInputChange(
+            departmentInput,
+            "department-suggestions",
+            "department"
+          )
+        );
+        semesterInput.addEventListener("input", () =>
+          handleInputChange(semesterInput, "semester-suggestions", "semester")
+        );
+        subjectInput.addEventListener("input", () =>
+          handleInputChange(subjectInput, "subject-suggestions", "title")
+        );
+
+        function renderCards() {
+          const filtered = filterSubjects(
+            departmentInput.value,
+            semesterInput.value,
+            subjectInput.value
+          );
+          subjectCards.innerHTML = filtered
+            .map(
+              (s) => `
+          <div class="overflow-hidden border rounded-lg shadow-md">
+            <img src="${s.image}" alt="${s.title}" class="w-full h-40 object-cover" />
+            <div class="p-4">
+              <h2 class="text-lg font-semibold mb-2">${s.title}</h2>
+              <p class="text-sm text-gray-600">${s.code}</p>
+              <a href="${s.driveLink}" target="_blank">
+                <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+                  Explore
+                </button>
+              </a>
+            </div>
+          </div>
+        `
+            )
+            .join("");
+        }
+
+        departmentInput.addEventListener("input", renderCards);
+        semesterInput.addEventListener("input", renderCards);
+        subjectInput.addEventListener("input", renderCards);
+
+        renderCards();
+      });
+    </script>
+  </body>
 </html>
