@@ -15,7 +15,7 @@
     <!-- swiper css -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -37,7 +37,6 @@
         },
       };
     </script>
-
     <!-- custom css -->
     <link rel="stylesheet" href="styles.css" />
 
@@ -164,16 +163,21 @@
 
     <!-- Courses Section -->
     <section class="feature mt-4" id="subject">
+      <!-- Subjects -->
       <div class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold text-center mb-8">Popular <span class="text-[#4846A5]">Subjects</span></h1>
-        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 subject-cards">
+        <h1 class="text-3xl font-bold text-center mb-8">
+          Popular <span class="text-[#4846A5]">Subjects</span>
+        </h1>
+        <div
+          class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 subject-cards"
+        >
           <!-- Subject Card 1 -->
           <div
             class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden"
           >
             <div class="p-4">
               <img
-                src="/Edu-Pulse/assets/images/rts_!.jpg"
+                src="/assets/images/rts_!.jpg"
                 alt="Real Time System"
                 class="w-full h-48 object-cover mb-4"
               />
@@ -187,9 +191,8 @@
                 href="https://drive.google.com"
                 target="_blank"
                 class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
+                >Explore</a
               >
-                Explore
-              </a>
             </div>
           </div>
 
@@ -199,7 +202,7 @@
           >
             <div class="p-4">
               <img
-                src="/Edu-Pulse/assets/images/aad_1.jpg"
+                src="/assets/images/aad_1.jpg"
                 alt="Design and Analysis of Algorithm"
                 class="w-full h-48 object-cover mb-4"
               />
@@ -224,11 +227,8 @@
             class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden"
           >
             <div class="p-4">
-              <img
-                src="/Edu-Pulse/assets/images/de_1.jpg"
-                alt="Digital Electronics"
-                class="w-full h-48 object-cover mb-4"
-              />
+              <img /assets/images/de_1.jpg" alt="Digital Electronics"
+              class="w-full h-48 object-cover mb-4" />
               <p class="text-xs uppercase text-gray-500 text-center">E&I</p>
               <h2 class="text-lg font-semibold text-center mt-2">
                 Digital Electronics
@@ -245,31 +245,29 @@
             </div>
           </div>
 
-           <!-- Subject Card 4 -->
-           <div
-           class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden"
-         >
-           <div class="p-4">
-             <img
-               src="/Edu-Pulse/assets/images/robo_1.jpg"
-               alt="Robotics"
-               class="w-full h-48 object-cover mb-4"
-             />
-             <p class="text-xs uppercase text-gray-500 text-center">Mech</p>
-             <h2 class="text-lg font-semibold text-center mt-2">
-               Robotics
-             </h2>
-           </div>
-           <div class="p-4">
-             <a
-               href="https://drive.google.com"
-               target="_blank"
-               class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-             >
-               Explore
-             </a>
-           </div>
-         </div>
+          <!-- Subject Card 4 -->
+          <div
+            class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden"
+          >
+            <div class="p-4">
+              <img
+                src="/assets/images/robo_1.jpg"
+                alt="Robotics"
+                class="w-full h-48 object-cover mb-4"
+              />
+              <p class="text-xs uppercase text-gray-500 text-center">Mech</p>
+              <h2 class="text-lg font-semibold text-center mt-2">Robotics</h2>
+            </div>
+            <div class="p-4">
+              <a
+                href="https://drive.google.com"
+                target="_blank"
+                class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
+              >
+                Explore
+              </a>
+            </div>
+          </div>
 
           <!-- Subject Card 5 -->
           <div
@@ -277,13 +275,37 @@
           >
             <div class="p-4">
               <img
-                src="/Edu-Pulse/assets/images/eco_1.jpg"
+                src="/assets/images/eco_1.jpg"
                 alt="Economics"
                 class="w-full h-48 object-cover mb-4"
               />
               <p class="text-xs uppercase text-gray-500 text-center">ALL</p>
+              <h2 class="text-lg font-semibold text-center mt-2">Economics</h2>
+            </div>
+            <div class="p-4">
+              <a
+                href="https://drive.google.com"
+                target="_blank"
+                class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
+              >
+                Explore
+              </a>
+            </div>
+          </div>
+
+          <!-- Subject Card 6 -->
+          <div
+            class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden"
+          >
+            <div class="p-4">
+              <img
+                src="/assets/images/oops_!.jpg"
+                alt="Digital Electronics"
+                class="w-full h-48 object-cover mb-4"
+              />
+              <p class="text-xs uppercase text-gray-500 text-center">CSE</p>
               <h2 class="text-lg font-semibold text-center mt-2">
-                Economics
+                Object Oriented Programming
               </h2>
             </div>
             <div class="p-4">
@@ -297,359 +319,357 @@
             </div>
           </div>
 
-           <!-- Subject Card 3 -->
-           <div
-           class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden"
-         >
-           <div class="p-4">
-             <img
-               src="/Edu-Pulse/assets/images/oops_!.jpg"
-               alt="Digital Electronics"
-               class="w-full h-48 object-cover mb-4"
-             />
-             <p class="text-xs uppercase text-gray-500 text-center">CSE</p>
-             <h2 class="text-lg font-semibold text-center mt-2">
-               Object Oriented Programming
-             </h2>
-           </div>
-           <div class="p-4">
-             <a
-               href="https://drive.google.com"
-               target="_blank"
-               class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-             >
-               Explore
-             </a>
-           </div>
-         </div>
           <!-- Add more subject cards as needed -->
         </div>
       </div>
 
       <!-- Departments -->
-      <div id="all-department"></div>
-      <div class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold text-center mb-8">ALL <span class="text-[#4846A5]">Departments</span></h1>
-  
-<!-- Swiper Container -->
-<div class="relative"> 
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
+      <div class="container mx-auto px-4 py-8" id="all-department">
+        <h1 class="text-3xl font-bold text-center mb-8">
+          ALL <span class="text-[#4846A5]">Departments</span>
+        </h1>
 
-      <!-- Department Card 1 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/Edu-Pulse/assets/images/cse.jpg"
-              alt="CSE"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Computer Science and Engineering
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
+        <!-- Swiper Container -->
+        <div class="relative">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <!-- Department Card 1 -->
+              <div class="swiper-slide">
+                <div
+                  class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden"
+                >
+                  <div class="p-4">
+                    <img
+                      src="/assets/images/cse.jpg"
+                      alt="CSE"
+                      class="w-full h-48 object-cover mb-4"
+                    />
+                    <h2 class="text-lg font-semibold text-center mt-2">
+                      Computer Science and Engineering
+                    </h2>
+                  </div>
+                  <div class="p-4">
+                    <a
+                      href="https://drive.google.com"
+                      target="_blank"
+                      class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
+                      >Explore</a
+                    >
+                  </div>
+                </div>
+              </div>
 
-      <!-- Department Card 2 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/Edu-Pulse/assets/images/it.jpg"
-              alt="IT"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Information Technology                                                                                   
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
+              <!-- Department Card 2 -->
+              <div class="swiper-slide">
+                <div
+                  class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden"
+                >
+                  <div class="p-4">
+                    <img
+                      src="/assets/images/it.jpg"
+                      alt="IT"
+                      class="w-full h-48 object-cover mb-4"
+                    />
+                    <h2 class="text-lg font-semibold text-center mt-2">
+                      Information Technology
+                    </h2>
+                  </div>
+                  <div class="p-4">
+                    <a
+                      href="https://drive.google.com"
+                      target="_blank"
+                      class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
+                    >
+                      Explore
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-      <!-- Department Card 3 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/Edu-Pulse/assets/images/me.jpg"
-              alt="ME"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Mechanical Engineering
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
+              <!-- Department Card 3 -->
+              <div class="swiper-slide">
+                <div
+                  class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden"
+                >
+                  <div class="p-4">
+                    <img
+                      src="/assets/images/me.jpg"
+                      alt="ME"
+                      class="w-full h-48 object-cover mb-4"
+                    />
+                    <h2 class="text-lg font-semibold text-center mt-2">
+                      Mechanical Engineering
+                    </h2>
+                  </div>
+                  <div class="p-4">
+                    <a
+                      href="https://drive.google.com"
+                      target="_blank"
+                      class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
+                    >
+                      Explore
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-      <!-- Department Card 4 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/Edu-Pulse/assets/images/air.jpg"
-              alt="AI&R"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              AI & Robotics
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
+              <!-- Department Card 4 -->
+              <div class="swiper-slide">
+                <div
+                  class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden"
+                >
+                  <div class="p-4">
+                    <img
+                      src="/assets/images/air.jpg"
+                      alt="AI&R"
+                      class="w-full h-48 object-cover mb-4"
+                    />
+                    <h2 class="text-lg font-semibold text-center mt-2">
+                      AI & Robotics
+                    </h2>
+                  </div>
+                  <div class="p-4">
+                    <a
+                      href="https://drive.google.com"
+                      target="_blank"
+                      class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
+                    >
+                      Explore
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-      <!-- Department Card 5 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/Edu-Pulse/assets/images/elec.jpg"
-              alt="EE"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Electrical Engineering
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
+              <!-- Department Card 5 -->
+              <div class="swiper-slide">
+                <div
+                  class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden"
+                >
+                  <div class="p-4">
+                    <img
+                      src="/assets/images/elec.jpg"
+                      alt="EE"
+                      class="w-full h-48 object-cover mb-4"
+                    />
+                    <h2 class="text-lg font-semibold text-center mt-2">
+                      Electrical Engineering
+                    </h2>
+                  </div>
+                  <div class="p-4">
+                    <a
+                      href="https://drive.google.com"
+                      target="_blank"
+                      class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
+                    >
+                      Explore
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-      <!-- Department Card 6 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/Edu-Pulse/assets/images/eni.jpg"
-              alt="E&I"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Electronics and Instrumentation
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
+              <!-- Department Card 6 -->
+              <div class="swiper-slide">
+                <div
+                  class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden"
+                >
+                  <div class="p-4">
+                    <img
+                      src="/assets/images/eni.jpg"
+                      alt="E&I"
+                      class="w-full h-48 object-cover mb-4"
+                    />
+                    <h2 class="text-lg font-semibold text-center mt-2">
+                      Electronics and Instrumentation
+                    </h2>
+                  </div>
+                  <div class="p-4">
+                    <a
+                      href="https://drive.google.com"
+                      target="_blank"
+                      class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
+                    >
+                      Explore
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-      <!-- Department Card 7 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/Edu-Pulse/assets/images/civil.jpg"
-              alt="CE"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Civil Engineering
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
+              <!-- Department Card 7 -->
+              <div class="swiper-slide">
+                <div
+                  class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden"
+                >
+                  <div class="p-4">
+                    <img
+                      src="/assets/images/civil.jpg"
+                      alt="CE"
+                      class="w-full h-48 object-cover mb-4"
+                    />
+                    <h2 class="text-lg font-semibold text-center mt-2">
+                      Civil Engineering
+                    </h2>
+                  </div>
+                  <div class="p-4">
+                    <a
+                      href="https://drive.google.com"
+                      target="_blank"
+                      class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
+                    >
+                      Explore
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-      <!-- Department Card 8 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/Edu-Pulse/assets/images/biotech.jpg"
-              alt="BT"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Biotechnology
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
+              <!-- Department Card 8 -->
+              <div class="swiper-slide">
+                <div
+                  class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden"
+                >
+                  <div class="p-4">
+                    <img
+                      src="/assets/images/biotech.jpg"
+                      alt="BT"
+                      class="w-full h-48 object-cover mb-4"
+                    />
+                    <h2 class="text-lg font-semibold text-center mt-2">
+                      Biotechnology
+                    </h2>
+                  </div>
+                  <div class="p-4">
+                    <a
+                      href="https://drive.google.com"
+                      target="_blank"
+                      class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
+                    >
+                      Explore
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-      <!-- Department Card 9 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/Edu-Pulse/assets/images/mnc.jpg"
-              alt="M&C"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Mathematics and Computing
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
+              <!-- Department Card 9 -->
+              <div class="swiper-slide">
+                <div
+                  class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden"
+                >
+                  <div class="p-4">
+                    <img
+                      src="/assets/images/mnc.jpg"
+                      alt="M&C"
+                      class="w-full h-48 object-cover mb-4"
+                    />
+                    <h2 class="text-lg font-semibold text-center mt-2">
+                      Mathematics and Computing
+                    </h2>
+                  </div>
+                  <div class="p-4">
+                    <a
+                      href="https://drive.google.com"
+                      target="_blank"
+                      class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
+                    >
+                      Explore
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-      <!-- Department Card 10 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/assets/images/home.png"
-              alt="Physics"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Physics
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
+              <!-- Department Card 10 -->
+              <div class="swiper-slide">
+                <div
+                  class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden"
+                >
+                  <div class="p-4">
+                    <img
+                      src="/assets/images/home.png"
+                      alt="Physics"
+                      class="w-full h-48 object-cover mb-4"
+                    />
+                    <h2 class="text-lg font-semibold text-center mt-2">
+                      Physics
+                    </h2>
+                  </div>
+                  <div class="p-4">
+                    <a
+                      href="https://drive.google.com"
+                      target="_blank"
+                      class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
+                    >
+                      Explore
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-      <!-- Department Card 10 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/assets/images/home.png"
-              alt="Chemistry"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Chemistry
-            </h2>
+              <!-- Department Card 10 -->
+              <div class="swiper-slide">
+                <div
+                  class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden"
+                >
+                  <div class="p-4">
+                    <img
+                      src="/assets/images/home.png"
+                      alt="Chemistry"
+                      class="w-full h-48 object-cover mb-4"
+                    />
+                    <h2 class="text-lg font-semibold text-center mt-2">
+                      Chemistry
+                    </h2>
+                  </div>
+                  <div class="p-4">
+                    <a
+                      href="https://drive.google.com"
+                      target="_blank"
+                      class="w-full bg-black hover:bg-gray-800 text-white rounded text-center block"
+                    >
+                      Explore
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Add more department cards as needed -->
+            </div>
+
+            <!-- Swiper Controls -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Add more department cards as needed -->
-    </div>
-  </div>
-
-  <!-- Add Navigation Buttons Outside the Swiper -->
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-</div>
-
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    speed: 1000,
-    slidesPerView: 1, // Shows 4 cards at a time
-    slidesPerGroup: 1, // Moves 4 cards at a time
-    spaceBetween: 20,
-    loop: false,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        390: {
-          slidesPerView: 1,
-          slidesPerGroup: 1,
-        },
-        700: { 
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-          slidesPerGroup: 3,
-        },
-      }
-  });
-</script>
-
         </div>
       </div>
     </section>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+      });
+    </script>
 
     <!-- Why Choose Us -->
     <div
