@@ -14,27 +14,26 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Tailwind css -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            "thirty-pr-color": "#3b82f6",
-            "ten-pr-color": "#f59e0b",
-          },
-          fontFamily: {
-            poppins: ["Poppins", "sans-serif"],
+    <!-- Tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "thirty-pr-color": "#3b82f6",
+              "ten-pr-color": "#f59e0b",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
           },
         },
-      },
-    };
-  </script>
-
-  <!-- custom css -->
-  <link rel="stylesheet" href="styles.css" />
+      };
+    </script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles.css" />
 
   <!-- javascript -->
   <script src="script.js"></script>
@@ -460,43 +459,44 @@
           </div>
         </div>
 
-        <!-- Add Navigation Buttons Outside the Swiper -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+            <!-- Swiper Controls -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <script>
-        var swiper = new Swiper(".mySwiper", {
-          speed: 1000,
-          slidesPerView: 1, // Shows 4 cards at a time
-          slidesPerGroup: 1, // Moves 4 cards at a time
-          spaceBetween: 20,
-          showsPagination: false,
-          loop: false,
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 10,
           },
-          breakpoints: {
-            390: {
-              slidesPerView: 1,
-              slidesPerGroup: 1,
-            },
-            700: {
-              slidesPerView: 2,
-              slidesPerGroup: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-              slidesPerGroup: 3,
-            },
-          }
-        });
-      </script>
-
-    </div>
-    </div>
-  </section>
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+      });
+    </script>
 
   <!-- Why Choose Us -->
   <div class="max-w-7xl mx-auto mt-10 p-6 text-center" id="why-edupulse-container">
@@ -705,6 +705,5 @@
         alt="login-rounded-up"
       />
     </div> -->
-</body>
-
+  </body>
 </html>
