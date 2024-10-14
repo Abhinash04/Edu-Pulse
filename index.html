@@ -1,146 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EduPulse</title>
 
-    <!-- box icons -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduPulse</title>
 
-    <!-- swiper css -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- box icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-    <!-- Tailwind css -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "thirty-pr-color": "#3b82f6",
-              "ten-pr-color": "#f59e0b",
-            },
-            fontFamily: {
-              poppins: ["Poppins", "sans-serif"],
-            },
+  <!-- swiper css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Tailwind css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "thirty-pr-color": "#3b82f6",
+            "ten-pr-color": "#f59e0b",
+          },
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
           },
         },
-      };
-    </script>
+      },
+    };
+  </script>
 
-    <!-- custom css -->
-    <link rel="stylesheet" href="styles.css" />
+  <!-- custom css -->
+  <link rel="stylesheet" href="styles.css" />
 
-    <!-- javascript -->
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <!-- header design -->
-    <header class="header visible" id="home-header">
-      <nav class="navbar bg-cream">
-        <div class="logo">
-          <div class="square"></div>
-          <a href="/">
-            <h4>EduPulse</h4>
-          </a>
-        </div>
-        <ul class="nav-list">
-          <li><a href="#home">Home</a></li>
-          <li><a href="subject.html">Subject</a></li>
-          <li><a href="#why-edupulse-container">Why EduPulse</a></li>
-          <li><a href="#about-us-container">About Us</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-        </ul>
+  <!-- javascript -->
+  <script src="script.js"></script>
+</head>
 
-        <!-- <div class="bx bx-user" id="user-icon"></div>
+<body>
+  <!-- header design -->
+  <header class="header visible" id="home-header">
+    <nav class="navbar bg-cream">
+      <div class="logo">
+        <div class="square"></div>
+        <a href="/">
+          <h4>EduPulse</h4>
+        </a>
+      </div>
+      <ul class="nav-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="subject.html">Subject</a></li>
+        <li><a href="#why-edupulse-container">Why EduPulse</a></li>
+        <li><a href="#about-us-container">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+
+      <!-- <div class="bx bx-user" id="user-icon"></div>
 
             <div class="notes">
                 <button id="notes" onclick="">My Notes</button>
             </div>
 
             <div class="bx bx-menu" id="menu-icon"></div> -->
-      </nav>
-    </header>
+    </nav>
+  </header>
 
-    <!-- Home Section -->
-    <section id="home">
-      <div class="relative py-12 bg-white sm:py-16 lg:py-20">
-        <div class="absolute inset-0">
-          <img
-            class="object-cover object-right w-full h-full lg:object-center"
-            src="https://outr.ac.in/public/uploads/QT-odisha_1.png"
-            alt=""
-          />
-        </div>
+  <!-- Home Section -->
+  <section id="home">
+    <div class="relative py-12 bg-white sm:py-16 lg:py-20">
+      <div class="absolute inset-0">
+        <img class="object-cover object-right w-full h-full lg:object-center"
+          src="https://outr.ac.in/public/uploads/QT-odisha_1.png" alt="" />
+      </div>
 
-        <div class="absolute inset-0 bg-gray-900 bg-opacity-40"></div>
+      <div class="absolute inset-0 bg-gray-900 bg-opacity-40"></div>
 
-        <div class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-          <div class="max-w-lg mx-auto text-center xl:max-w-2xl">
-            <h1 class="text-3xl font-bold text-white sm:text-4xl xl:text-5xl">
-              Find the best exam resources in one tap
-            </h1>
-            <p
-              class="max-w-lg mx-auto mt-6 text-base font-normal leading-7 text-gray-300"
-            >
-              Get the best quality Handwritten Notes, Previous Year Question
-              Paper, Important Questions and Syllabus Explanation
-            </p>
+      <div class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-lg mx-auto text-center xl:max-w-2xl">
+          <h1 class="text-3xl font-bold text-white sm:text-4xl xl:text-5xl">
+            Find the best exam resources in one tap
+          </h1>
+          <p class="max-w-lg mx-auto mt-6 text-base font-normal leading-7 text-gray-300">
+            Get the best quality Handwritten Notes, Previous Year Question
+            Paper, Important Questions and Syllabus Explanation
+          </p>
 
-            <form action="#" class="max-w-xl mx-auto mt-10">
-              <div>
-                <label for="" class="sr-only"> Search </label>
-                <div class="relative">
-                  <div
-                    class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
-                  >
-                    <svg
-                      class="w-5 h-5 text-gray-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      />
-                    </svg>
-                  </div>
-
-                  <input
-                    type="text"
-                    name=""
-                    id=""
-                    placeholder="Try IT, CSE, DAA etc..."
-                    class="block w-full py-3 pl-10 pr-4 text-base font-normal leading-7 text-gray-900 placeholder-gray-500 bg-white border border-white focus:ring-white focus:border-white focus:ring-offset-2"
-                  />
+          <form action="#" class="max-w-xl mx-auto mt-10">
+            <div>
+              <label for="" class="sr-only"> Search </label>
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
                 </div>
-              </div>
 
-              <div>
-                <button
-                  type="submit"
-                  class="inline-flex items-center justify-center w-full px-6 py-4 text-sm font-bold tracking-widest text-white uppercase transition-all duration-200 bg-gray-800 border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-white hover:bg-gray-700"
-                >
-                  Search now
-                </button>
+                <input type="text" name="" id="" placeholder="Try IT, CSE, DAA etc..."
+                  class="block w-full py-3 pl-10 pr-4 text-base font-normal leading-7 text-gray-900 placeholder-gray-500 bg-white border border-white focus:ring-white focus:border-white focus:ring-offset-2" />
               </div>
-            </form>
+            </div>
 
-            <!-- <div
+            <div>
+              <button type="submit"
+                class="inline-flex items-center justify-center w-full px-6 py-4 text-sm font-bold tracking-widest text-white uppercase transition-all duration-200 bg-gray-800 border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-white hover:bg-gray-700">
+                Search now
+              </button>
+            </div>
+          </form>
+
+          <!-- <div
               class="grid max-w-md grid-cols-2 mx-auto mt-8 md:mt-16 lg:mt-24 xl:mt-32 gap-x-6 grid-col-2"
             >
               <div>
@@ -157,768 +130,581 @@
                 </p>
               </div>
             </div> -->
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Courses Section -->
-    <section class="feature mt-4" id="subject">
-      <div class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold text-center mb-8">Popular <span class="text-[#4846A5]">Subjects</span></h1>
-        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 subject-cards">
-          <!-- Subject Card 1 -->
-          <div
-            class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden"
-          >
-            <div class="p-4">
-              <img
-                src="/Edu-Pulse/assets/images/rts_!.jpg"
-                alt="Real Time System"
-                class="w-full h-48 object-cover mb-4"
-              />
-              <p class="text-xs uppercase text-gray-500 text-center">CSE</p>
-              <h2 class="text-lg font-semibold text-center mt-2">
-                Real Time System
-              </h2>
-            </div>
-            <div class="p-4">
-              <a
-                href="https://drive.google.com"
-                target="_blank"
-                class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-              >
-                Explore
-              </a>
-            </div>
-          </div>
-
-          <!-- Subject Card 2 -->
-          <div
-            class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden"
-          >
-            <div class="p-4">
-              <img
-                src="/Edu-Pulse/assets/images/aad_1.jpg"
-                alt="Design and Analysis of Algorithm"
-                class="w-full h-48 object-cover mb-4"
-              />
-              <p class="text-xs uppercase text-gray-500 text-center">IT</p>
-              <h2 class="text-lg font-semibold text-center mt-2">
-                Design and Analysis of Algorithm
-              </h2>
-            </div>
-            <div class="p-4">
-              <a
-                href="https://drive.google.com"
-                target="_blank"
-                class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-              >
-                Explore
-              </a>
-            </div>
-          </div>
-
-          <!-- Subject Card 3 -->
-          <div
-            class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden"
-          >
-            <div class="p-4">
-              <img
-                src="/Edu-Pulse/assets/images/de_1.jpg"
-                alt="Digital Electronics"
-                class="w-full h-48 object-cover mb-4"
-              />
-              <p class="text-xs uppercase text-gray-500 text-center">E&I</p>
-              <h2 class="text-lg font-semibold text-center mt-2">
-                Digital Electronics
-              </h2>
-            </div>
-            <div class="p-4">
-              <a
-                href="https://drive.google.com"
-                target="_blank"
-                class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-              >
-                Explore
-              </a>
-            </div>
-          </div>
-
-           <!-- Subject Card 4 -->
-           <div
-           class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden"
-         >
-           <div class="p-4">
-             <img
-               src="/Edu-Pulse/assets/images/robo_1.jpg"
-               alt="Robotics"
-               class="w-full h-48 object-cover mb-4"
-             />
-             <p class="text-xs uppercase text-gray-500 text-center">Mech</p>
-             <h2 class="text-lg font-semibold text-center mt-2">
-               Robotics
-             </h2>
-           </div>
-           <div class="p-4">
-             <a
-               href="https://drive.google.com"
-               target="_blank"
-               class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-             >
-               Explore
-             </a>
-           </div>
-         </div>
-
-          <!-- Subject Card 5 -->
-          <div
-            class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden"
-          >
-            <div class="p-4">
-              <img
-                src="/Edu-Pulse/assets/images/eco_1.jpg"
-                alt="Economics"
-                class="w-full h-48 object-cover mb-4"
-              />
-              <p class="text-xs uppercase text-gray-500 text-center">ALL</p>
-              <h2 class="text-lg font-semibold text-center mt-2">
-                Economics
-              </h2>
-            </div>
-            <div class="p-4">
-              <a
-                href="https://drive.google.com"
-                target="_blank"
-                class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-              >
-                Explore
-              </a>
-            </div>
-          </div>
-
-           <!-- Subject Card 3 -->
-           <div
-           class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden"
-         >
-           <div class="p-4">
-             <img
-               src="/Edu-Pulse/assets/images/oops_!.jpg"
-               alt="Digital Electronics"
-               class="w-full h-48 object-cover mb-4"
-             />
-             <p class="text-xs uppercase text-gray-500 text-center">CSE</p>
-             <h2 class="text-lg font-semibold text-center mt-2">
-               Object Oriented Programming
-             </h2>
-           </div>
-           <div class="p-4">
-             <a
-               href="https://drive.google.com"
-               target="_blank"
-               class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-             >
-               Explore
-             </a>
-           </div>
-         </div>
-          <!-- Add more subject cards as needed -->
-        </div>
-      </div>
-
-      <!-- Departments -->
-      <div id="all-department"></div>
-      <div class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold text-center mb-8">ALL <span class="text-[#4846A5]">Departments</span></h1>
-  
-<!-- Swiper Container -->
-<div class="relative"> 
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-
-      <!-- Department Card 1 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/Edu-Pulse/assets/images/cse.jpg"
-              alt="CSE"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Computer Science and Engineering
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Department Card 2 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/Edu-Pulse/assets/images/it.jpg"
-              alt="IT"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Information Technology                                                                                   
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Department Card 3 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/Edu-Pulse/assets/images/me.jpg"
-              alt="ME"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Mechanical Engineering
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Department Card 4 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/Edu-Pulse/assets/images/air.jpg"
-              alt="AI&R"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              AI & Robotics
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Department Card 5 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/Edu-Pulse/assets/images/elec.jpg"
-              alt="EE"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Electrical Engineering
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Department Card 6 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/Edu-Pulse/assets/images/eni.jpg"
-              alt="E&I"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Electronics and Instrumentation
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Department Card 7 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/Edu-Pulse/assets/images/civil.jpg"
-              alt="CE"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Civil Engineering
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Department Card 8 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/Edu-Pulse/assets/images/biotech.jpg"
-              alt="BT"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Biotechnology
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Department Card 9 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/Edu-Pulse/assets/images/mnc.jpg"
-              alt="M&C"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Mathematics and Computing
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Department Card 10 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/assets/images/home.png"
-              alt="Physics"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Physics
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Department Card 10 -->
-      <div class="swiper-slide">
-        <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
-            <img
-              src="/assets/images/home.png"
-              alt="Chemistry"
-              class="w-full h-48 object-cover mb-4"
-            />
-            <h2 class="text-lg font-semibold text-center mt-2">
-              Chemistry
-            </h2>
-          </div>
-          <div class="p-4">
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              class="w-full bg-black hover:bg-gray-800 text-white rounded text-center block"
-            >
-              Explore
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Add more department cards as needed -->
-    </div>
-  </div>
-
-  <!-- Add Navigation Buttons Outside the Swiper -->
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-</div>
-
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    speed: 1000,
-    slidesPerView: 1, // Shows 4 cards at a time
-    slidesPerGroup: 1, // Moves 4 cards at a time
-    spaceBetween: 20,
-    loop: false,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        390: {
-          slidesPerView: 1,
-          slidesPerGroup: 1,
-        },
-        700: { 
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-          slidesPerGroup: 3,
-        },
-      }
-  });
-</script>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <div
-      class="max-w-7xl mx-auto mt-10 p-6 text-center"
-      id="why-edupulse-container"
-    >
-      <h2 class="text-2xl font-bold">
-        Why <span class="text-blue-600">Choose us?</span>
-      </h2>
-      <div class="flex flex-col lg:flex-row justify-between gap-3 mt-6">
-        <!-- Left side: Image and content -->
-        <div class="flex flex-col items-center lg:items-start lg:flex-[2]">
-          <img
-            class="w-64 mb-4 lg:mb-0"
-            src="assets/images/kid.png"
-            alt="Kid image"
-          />
-        </div>
-
-        <!-- Right side: Content grid -->
-        <div class="flex-[3] grid grid-cols-1 md:grid-cols-2 gap-3">
-          <div class="p-4 border-l-4 border-blue-500">
-            <h3 class="text-blue-600 font-bold">Organised study material</h3>
-            <p class="mt-2">
-              categorized notes and resources, ensuring students can find what
-              they need quickly, saving valuable study time.
-            </p>
-          </div>
-          <div class="p-4 border-l-4 border-blue-500">
-            <h3 class="text-blue-600 font-bold">Accessible Anytime Anywhere</h3>
-            <p class="mt-2">
-              our platform is accessible across devices, ensuring you can study
-              whenever it’s convenient for you.
-            </p>
-          </div>
-          <div class="p-4 border-l-4 border-blue-500">
-            <h3 class="text-blue-600 font-bold">Regularly Updated Content</h3>
-            <p class="mt-2">
-              Stay ahead with notes that are constantly updated to reflect the
-              latest academic curriculum and exam patterns.
-            </p>
-          </div>
-          <div class="p-4 border-l-4 border-blue-500">
-            <h3 class="text-blue-600 font-bold">Support multiple subjects:</h3>
-            <p class="mt-2">
-              we offer resources across a range of subjects, helping you excel
-              in your studies.
-            </p>
-          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about-us-container" class="mt-12 flex flex-col p-8 gap-12">
-      <h1
-        class="text-3xl font-extrabold text-center font-poppins text-[var(--thirty-pr-color)]"
-      >
-        <span class="text-[var(--ten-pr-color)]">About</span> Us
-      </h1>
+  <!-- Courses Section -->
+  <section class="feature mt-4" id="subject">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold text-center mb-8">Popular <span class="text-[#4846A5]">Subjects</span></h1>
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 subject-cards">
+        <!-- Subject Card 1 -->
+        <div class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden">
+          <div class="p-4">
+            <img src="https://drive.google.com/thumbnail?id=1feU2yMs5KxrH28ToGs50_gildK8paqlU&sz=w1026-h1026" alt="Real Time System"
+              class="w-full h-48 object-cover mb-4" />
+            <p class="text-xs uppercase text-gray-500 text-center">CSE</p>
+            <h2 class="text-lg font-semibold text-center mt-2">
+              Real Time System
+            </h2>
+          </div>
+          <div class="p-4">
+            <a href="https://drive.google.com" target="_blank"
+              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block">
+              Explore
+            </a>
+          </div>
+        </div>
 
-      <div
-        class="about-us-content mx-auto flex flex-col gap-4 p-6 shadow-lg text-[var(--thirty-pr-color)] transition-all duration-700 ease-in-out hover:shadow-xl"
-      >
-        <h1 class="text-xl font-rubik">
-          About <span class="text-[var(--ten-pr-color)]">EduPulse</span>
-        </h1>
-        <p class="text-base font-quicksand font-medium">
-          EduPulse is an educational portal that caters to the needs of students
-          by offering concise handwritten notes, effective exam preparation
-          materials, previous year question papers, and important topics for
-          exams. It provides comprehensive explanations in a well-understood
-          format for subjects covered in the syllabus.
-        </p>
+        <!-- Subject Card 2 -->
+        <div class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden">
+          <div class="p-4">
+            <img src="https://drive.google.com/thumbnail?id=1k_MLH2RGtHsg-uBv76JKltN5UVZ4uTlm&sz=w1026-h1026" alt="Design and Analysis of Algorithm"
+              class="w-full h-48 object-cover mb-4" />
+            <p class="text-xs uppercase text-gray-500 text-center">IT</p>
+            <h2 class="text-lg font-semibold text-center mt-2">
+              Design and Analysis of Algorithm
+            </h2>
+          </div>
+          <div class="p-4">
+            <a href="https://drive.google.com" target="_blank"
+              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block">
+              Explore
+            </a>
+          </div>
+        </div>
+
+        <!-- Subject Card 3 -->
+        <div class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden">
+          <div class="p-4">
+            <img src="https://drive.google.com/thumbnail?id=1eR_hkcznl8KCAWKROkkQPLPjv33fDgqy&sz=w1026-h1026" alt="Digital Electronics"
+              class="w-full h-48 object-cover mb-4" />
+            <p class="text-xs uppercase text-gray-500 text-center">E&I</p>
+            <h2 class="text-lg font-semibold text-center mt-2">
+              Digital Electronics
+            </h2>
+          </div>
+          <div class="p-4">
+            <a href="https://drive.google.com" target="_blank"
+              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block">
+              Explore
+            </a>
+          </div>
+        </div>
+
+        <!-- Subject Card 4 -->
+        <div class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden">
+          <div class="p-4">
+            <img src="https://drive.google.com/thumbnail?id=1ROR8ELN6YDZsLM7mt_cUm634UjHz5cpH&sz=w1026-h1026" alt="Robotics" class="w-full h-48 object-cover mb-4" />
+            <p class="text-xs uppercase text-gray-500 text-center">Mech</p>
+            <h2 class="text-lg font-semibold text-center mt-2">
+              Robotics
+            </h2>
+          </div>
+          <div class="p-4">
+            <a href="https://drive.google.com" target="_blank"
+              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block">
+              Explore
+            </a>
+          </div>
+        </div>
+
+        <!-- Subject Card 5 -->
+        <div class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden">
+          <div class="p-4">
+            <img src="https://drive.google.com/thumbnail?id=1sk1h1GbF_jkLEbrfc8NZvNIZGnd0qswl&sz=w1026-h1026" alt="Economics" class="w-full h-48 object-cover mb-4" />
+            <p class="text-xs uppercase text-gray-500 text-center">ALL</p>
+            <h2 class="text-lg font-semibold text-center mt-2">
+              Economics
+            </h2>
+          </div>
+          <div class="p-4">
+            <a href="https://drive.google.com" target="_blank"
+              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block">
+              Explore
+            </a>
+          </div>
+        </div>
+
+        <!-- Subject Card 6 -->
+        <div class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden">
+          <div class="p-4">
+            <img src="https://drive.google.com/thumbnail?id=1173czQpnNpvCBiDiY9OavsHBsNz1ikaZ&sz=w1026-h1026" alt="Digital Electronics"
+              class="w-full h-48 object-cover mb-4" />
+            <p class="text-xs uppercase text-gray-500 text-center">CSE</p>
+            <h2 class="text-lg font-semibold text-center mt-2">
+              Object Oriented Programming
+            </h2>
+          </div>
+          <div class="p-4">
+            <a href="https://drive.google.com" target="_blank"
+              class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block">
+              Explore
+            </a>
+          </div>
+        </div>
+        <!-- Add more subject cards as needed -->
       </div>
+    </div>
 
-      <div
-        class="about-us-content mx-auto flex flex-col gap-4 p-6 shadow-lg text-[var(--thirty-pr-color)] transition-all duration-700 ease-in-out hover:shadow-xl"
-      >
-        <h1 class="text-xl font-rubik">
-          Why this <span class="text-[var(--ten-pr-color)]">Project</span>
-        </h1>
-        <p class="text-base font-quicksand font-medium">
-          The objective of EduPulse is to address the challenges faced by
-          students in their academic journey. By providing concise handwritten
-          notes, relevant study material, and previous year's question papers,
-          EduPulse ensures that students have access to high-quality resources
-          in a convenient manner. It aims to enhance their understanding and
-          retention of the subject matter.
-        </p>
-      </div>
+    <!-- Departments -->
+    <div id="all-department"></div>
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold text-center mb-8">ALL <span class="text-[#4846A5]">Departments</span></h1>
 
-      <div
-        class="about-us-content mx-auto flex flex-col gap-4 p-6 shadow-lg text-[var(--thirty-pr-color)] transition-all duration-700 ease-in-out hover:shadow-xl"
-      >
-        <h1 class="text-xl font-rubik">
-          Our <span class="text-[var(--ten-pr-color)]">Ideology</span>
-        </h1>
-        <p class="text-base font-quicksand font-medium">
-          EduPulse's website is a one-stop solution for students seeking
-          comprehensive study resources. It simplifies finding reliable
-          materials, saving students valuable time and effort. The website's
-          user-friendly interface and organized structure facilitate easy
-          navigation and efficient learning. Students can benefit from organized
-          resources, improved understanding, and enhanced academic performance,
-          ultimately leading to their success.
-        </p>
-      </div>
-    </section>
+      <!-- Swiper Container -->
+      <div class="relative">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
 
-    <!-- Contact Section -->
-    <section
-      class="contact py-16 px-4 md:px-8 lg:px-16 bg-[#f1f1f1]"
-      id="contact"
-    >
-      <div class="max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <!-- Left Side -->
-          <div class="space-y-8">
-            <div class="space-y-4">
-              <h2
-                class="text-3xl md:text-4xl font-bold text-gray-900 flex items-center"
-              >
-                Love to hear from you,
-                <span class="inline-block ml-2">👋</span>
-              </h2>
-              <p class="text-gray-600">
-                We provide resources for OUTR students that are very detailed
-                and covers all the topics of syllabus By refering to these notes
-                and exam material you can ace you semester exam. As Engineering
-                students we have our motto: <br />
-                <b
-                  >if tomorrow isn't the due date, then today isn't the do
-                  date</b
-                >
-                <br />So to tackel this we provide you exam resources that will
-                help you ace your exams.
-              </p>
-            </div>
-
-            <!-- Testimonial Card -->
-            <div
-              class="bg-blue-600 text-white p-6 rounded-2xl shadow-lg transform -rotate-2 transition-transform hover:rotate-0"
-            >
-              <div class="flex mb-4">
-                <span class="w-5 h-5 fill-current">⭐</span>
-                <span class="w-5 h-5 fill-current">⭐</span>
-                <span class="w-5 h-5 fill-current">⭐</span>
-                <span class="w-5 h-5 fill-current">⭐</span>
-                <span class="w-5 h-5 fill-current">⭐</span>
-              </div>
-              <p class="mb-4">
-                "Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Sapiente hic itaque ex temporibus ipsum beatae similique nulla
-                accusantium amet unde laudantium in vel consequuntur quo minima
-                aut, rerum deserunt nostrum?"
-              </p>
-              <div class="flex items-center">
-                <img
-                  src="https://via.placeholder.com/40"
-                  alt="Devon Lane"
-                  class="rounded-full mr-3"
-                />
-                <div>
-                  <p class="font-semibold">Subham Parida</p>
-                  <p class="text-sm opacity-75">Co-ordinator, Zairza</p>
+            <!-- Department Card 1 -->
+            <div class="swiper-slide">
+              <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
+                <div class="p-4">
+                  <img src="https://drive.google.com/thumbnail?id=1HNb6R4q0S1GdcIcZRfiE3vMbftbLW9vM&sz=w1026-h1026" alt="CSE" class="w-full h-48 object-cover mb-4" />
+                  <h2 class="text-lg font-semibold text-center mt-2">
+                    Computer Science and Engineering
+                  </h2>
+                </div>
+                <div class="p-4">
+                  <a href="https://drive.google.com" target="_blank"
+                    class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block">
+                    Explore
+                  </a>
                 </div>
               </div>
             </div>
+
+            <!-- Department Card 2 -->
+            <div class="swiper-slide">
+              <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
+                <div class="p-4">
+                  <img src="https://drive.google.com/thumbnail?id=1OWocdUu2njq4_jv1w_t2K_n4o0vwAVlr&sz=w1026-h1026" alt="IT" class="w-full h-48 object-cover mb-4" />
+                  <h2 class="text-lg font-semibold text-center mt-2">
+                    Information Technology
+                  </h2>
+                </div>
+                <div class="p-4">
+                  <a href="https://drive.google.com" target="_blank"
+                    class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block">
+                    Explore
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Department Card 3 -->
+            <div class="swiper-slide">
+              <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
+                <div class="p-4">
+                  <img src="https://drive.google.com/thumbnail?id=1IqaKlSgatW_H-zDeOMarR0xGb4W39QHQ&sz=w1026-h1026" alt="ME" class="w-full h-48 object-cover mb-4" />
+                  <h2 class="text-lg font-semibold text-center mt-2">
+                    Mechanical Engineering
+                  </h2>
+                </div>
+                <div class="p-4">
+                  <a href="https://drive.google.com" target="_blank"
+                    class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block">
+                    Explore
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Department Card 4 -->
+            <div class="swiper-slide">
+              <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
+                <div class="p-4">
+                  <img src="https://drive.google.com/thumbnail?id=1Bh2dAbiXeAjvKeYSUY9jn8rBzrUvZzpX&sz=w1026-h1026" alt="AI&R" class="w-full h-48 object-cover mb-4" />
+                  <h2 class="text-lg font-semibold text-center mt-2">
+                    AI & Robotics
+                  </h2>
+                </div>
+                <div class="p-4">
+                  <a href="https://drive.google.com" target="_blank"
+                    class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block">
+                    Explore
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Department Card 5 -->
+            <div class="swiper-slide">
+              <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
+                <div class="p-4">
+                  <img src="https://drive.google.com/thumbnail?id=1gozBqdlkZeJ2wH2rBAtb9Z4wo6UF5z26&sz=w1026-h1026" alt="EE" class="w-full h-48 object-cover mb-4" />
+                  <h2 class="text-lg font-semibold text-center mt-2">
+                    Electrical Engineering
+                  </h2>
+                </div>
+                <div class="p-4">
+                  <a href="https://drive.google.com" target="_blank"
+                    class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block">
+                    Explore
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Department Card 6 -->
+            <div class="swiper-slide">
+              <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
+                <div class="p-4">
+                  <img src="https://drive.google.com/thumbnail?id=1cRj1K3yBLR9L2TTnAcDrMuXOzUYfxnMt&sz=w1026-h1026" alt="E&I" class="w-full h-48 object-cover mb-4" />
+                  <h2 class="text-lg font-semibold text-center mt-2">
+                    Electronics and Instrumentation
+                  </h2>
+                </div>
+                <div class="p-4">
+                  <a href="https://drive.google.com" target="_blank"
+                    class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block">
+                    Explore
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Department Card 7 -->
+            <div class="swiper-slide">
+              <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
+                <div class="p-4">
+                  <img src="https://drive.google.com/thumbnail?id=17F3hMgvf-ZqcrI7csEV4ZHxoW27ZsIue&sz=w1026-h1026" alt="CE" class="w-full h-48 object-cover mb-4" />
+                  <h2 class="text-lg font-semibold text-center mt-2">
+                    Civil Engineering
+                  </h2>
+                </div>
+                <div class="p-4">
+                  <a href="https://drive.google.com" target="_blank"
+                    class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block">
+                    Explore
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Department Card 8 -->
+            <div class="swiper-slide">
+              <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
+                <div class="p-4">
+                  <img src="https://drive.google.com/thumbnail?id=1X31Y_ypzpQe35MtGyO6XXrA0f-v1mirH&sz=w1026-h1026" alt="BT" class="w-full h-48 object-cover mb-4" />
+                  <h2 class="text-lg font-semibold text-center mt-2">
+                    Biotechnology
+                  </h2>
+                </div>
+                <div class="p-4">
+                  <a href="https://drive.google.com" target="_blank"
+                    class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block">
+                    Explore
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Department Card 9 -->
+            <div class="swiper-slide">
+              <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
+                <div class="p-4">
+                  <img src="https://drive.google.com/thumbnail?id=1x9QFMuathkFm5Sm99yDOclYtcJ5slqsv&sz=w1026-h1026" alt="M&C" class="w-full h-48 object-cover mb-4" />
+                  <h2 class="text-lg font-semibold text-center mt-2">
+                    Mathematics and Computing
+                  </h2>
+                </div>
+                <div class="p-4">
+                  <a href="https://drive.google.com" target="_blank"
+                    class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block">
+                    Explore
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Department Card 10 -->
+            <div class="swiper-slide">
+              <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
+                <div class="p-4">
+                  <img src="https://drive.google.com/thumbnail?id=1x3sxvliy-wQlOFywJv-q9t8nBdu6EKW2&sz=w1026-h1026" alt="Physics" class="w-full h-48 object-cover mb-4" />
+                  <h2 class="text-lg font-semibold text-center mt-2">
+                    Physics
+                  </h2>
+                </div>
+                <div class="p-4">
+                  <a href="https://drive.google.com" target="_blank"
+                    class="w-full bg-black hover:bg-gray-800 text-white py-2 rounded text-center block">
+                    Explore
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Department Card 11 -->
+            <div class="swiper-slide">
+              <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
+                <div class="p-4">
+                  <img src="https://drive.google.com/thumbnail?id=140N1JBBRwH3bnqwrNJ3eAc4afDzb8yj8&sz=w1026-h1026" alt="Chemistry" class="w-full h-48 object-cover mb-4" />
+                  <h2 class="text-lg font-semibold text-center mt-2">
+                    Chemistry
+                  </h2>
+                </div>
+                <div class="p-4">
+                  <a href="https://drive.google.com" target="_blank"
+                    class="w-full bg-black hover:bg-gray-800 text-white rounded text-center block">
+                    Explore
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Add more department cards as needed -->
+          </div>
+        </div>
+
+        <!-- Add Navigation Buttons Outside the Swiper -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          speed: 1000,
+          slidesPerView: 1, // Shows 4 cards at a time
+          slidesPerGroup: 1, // Moves 4 cards at a time
+          spaceBetween: 20,
+          showsPagination: false,
+          loop: false,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            390: {
+              slidesPerView: 1,
+              slidesPerGroup: 1,
+            },
+            700: {
+              slidesPerView: 2,
+              slidesPerGroup: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+              slidesPerGroup: 3,
+            },
+          }
+        });
+      </script>
+
+    </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <div class="max-w-7xl mx-auto mt-10 p-6 text-center" id="why-edupulse-container">
+    <h2 class="text-2xl font-bold">
+      Why <span class="text-blue-600">Choose us?</span>
+    </h2>
+    <div class="flex flex-col lg:flex-row justify-between gap-3 mt-6">
+      <!-- Left side: Image and content -->
+      <div class="flex flex-col items-center lg:items-start lg:flex-[2]">
+        <img class="w-64 mb-4 lg:mb-0" src="assets/images/kid.png" alt="Kid image" />
+      </div>
+
+      <!-- Right side: Content grid -->
+      <div class="flex-[3] grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div class="p-4 border-l-4 border-blue-500">
+          <h3 class="text-blue-600 font-bold">Organised study material</h3>
+          <p class="mt-2">
+            categorized notes and resources, ensuring students can find what
+            they need quickly, saving valuable study time.
+          </p>
+        </div>
+        <div class="p-4 border-l-4 border-blue-500">
+          <h3 class="text-blue-600 font-bold">Accessible Anytime Anywhere</h3>
+          <p class="mt-2">
+            our platform is accessible across devices, ensuring you can study
+            whenever it’s convenient for you.
+          </p>
+        </div>
+        <div class="p-4 border-l-4 border-blue-500">
+          <h3 class="text-blue-600 font-bold">Regularly Updated Content</h3>
+          <p class="mt-2">
+            Stay ahead with notes that are constantly updated to reflect the
+            latest academic curriculum and exam patterns.
+          </p>
+        </div>
+        <div class="p-4 border-l-4 border-blue-500">
+          <h3 class="text-blue-600 font-bold">Support multiple subjects:</h3>
+          <p class="mt-2">
+            we offer resources across a range of subjects, helping you excel
+            in your studies.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about-us-container" class="mt-12 flex flex-col p-8 gap-12">
+    <h1 class="text-3xl font-extrabold text-center font-poppins text-[var(--thirty-pr-color)]">
+      <span class="text-[var(--ten-pr-color)]">About</span> Us
+    </h1>
+
+    <div
+      class="about-us-content mx-auto flex flex-col gap-4 p-6 shadow-lg text-[var(--thirty-pr-color)] transition-all duration-700 ease-in-out hover:shadow-xl">
+      <h1 class="text-xl font-rubik">
+        About <span class="text-[var(--ten-pr-color)]">EduPulse</span>
+      </h1>
+      <p class="text-base font-quicksand font-medium">
+        EduPulse is an educational portal that caters to the needs of students
+        by offering concise handwritten notes, effective exam preparation
+        materials, previous year question papers, and important topics for
+        exams. It provides comprehensive explanations in a well-understood
+        format for subjects covered in the syllabus.
+      </p>
+    </div>
+
+    <div
+      class="about-us-content mx-auto flex flex-col gap-4 p-6 shadow-lg text-[var(--thirty-pr-color)] transition-all duration-700 ease-in-out hover:shadow-xl">
+      <h1 class="text-xl font-rubik">
+        Why this <span class="text-[var(--ten-pr-color)]">Project</span>
+      </h1>
+      <p class="text-base font-quicksand font-medium">
+        The objective of EduPulse is to address the challenges faced by
+        students in their academic journey. By providing concise handwritten
+        notes, relevant study material, and previous year's question papers,
+        EduPulse ensures that students have access to high-quality resources
+        in a convenient manner. It aims to enhance their understanding and
+        retention of the subject matter.
+      </p>
+    </div>
+
+    <div
+      class="about-us-content mx-auto flex flex-col gap-4 p-6 shadow-lg text-[var(--thirty-pr-color)] transition-all duration-700 ease-in-out hover:shadow-xl">
+      <h1 class="text-xl font-rubik">
+        Our <span class="text-[var(--ten-pr-color)]">Ideology</span>
+      </h1>
+      <p class="text-base font-quicksand font-medium">
+        EduPulse's website is a one-stop solution for students seeking
+        comprehensive study resources. It simplifies finding reliable
+        materials, saving students valuable time and effort. The website's
+        user-friendly interface and organized structure facilitate easy
+        navigation and efficient learning. Students can benefit from organized
+        resources, improved understanding, and enhanced academic performance,
+        ultimately leading to their success.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact py-16 px-4 md:px-8 lg:px-16 bg-[#f1f1f1]" id="contact">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Left Side -->
+        <div class="space-y-8">
+          <div class="space-y-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 flex items-center">
+              Love to hear from you,
+              <span class="inline-block ml-2">👋</span>
+            </h2>
+            <p class="text-gray-600">
+              We provide resources for OUTR students that are very detailed
+              and covers all the topics of syllabus By refering to these notes
+              and exam material you can ace you semester exam. As Engineering
+              students we have our motto: <br />
+              <b>if tomorrow isn't the due date, then today isn't the do
+                date</b>
+              <br />So to tackel this we provide you exam resources that will
+              help you ace your exams.
+            </p>
           </div>
 
-          <!-- Right Side - Contact Form -->
-          <div class="bg-white p-8 rounded-lg shadow-md">
-            <h3 class="text-2xl font-bold mb-6">Send us a message</h3>
-            <form class="space-y-4" id="contactForm">
+          <!-- Testimonial Card -->
+          <div
+            class="bg-blue-600 text-white p-6 rounded-2xl shadow-lg transform -rotate-2 transition-transform hover:rotate-0">
+            <div class="flex mb-4">
+              <span class="w-5 h-5 fill-current">⭐</span>
+              <span class="w-5 h-5 fill-current">⭐</span>
+              <span class="w-5 h-5 fill-current">⭐</span>
+              <span class="w-5 h-5 fill-current">⭐</span>
+              <span class="w-5 h-5 fill-current">⭐</span>
+            </div>
+            <p class="mb-4">
+              "Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Sapiente hic itaque ex temporibus ipsum beatae similique nulla
+              accusantium amet unde laudantium in vel consequuntur quo minima
+              aut, rerum deserunt nostrum?"
+            </p>
+            <div class="flex items-center">
+              <img src="https://via.placeholder.com/40" alt="Devon Lane" class="rounded-full mr-3" />
               <div>
-                <label
-                  for="name"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Name</label
-                >
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your name"
-                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
+                <p class="font-semibold">Subham Parida</p>
+                <p class="text-sm opacity-75">Co-ordinator, Zairza</p>
               </div>
-              <div>
-                <label
-                  for="email"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Email</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Email address"
-                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div>
-                <label
-                  for="phone"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Phone</label
-                >
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="+1-222-333-4444"
-                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div>
-                <label
-                  for="message"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Message</label
-                >
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  placeholder="Write your message"
-                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
-              >
-                Send message
-              </button>
-            </form>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <footer class="footer mt-6">
-      <div class="edu-logo">
-        <div class="logo">
-          <div class="square"></div>
-          <h4 id="footer-logo">EduPulse</h4>
+        <!-- Right Side - Contact Form -->
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold mb-6">Send us a message</h3>
+          <form class="space-y-4" id="contactForm">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+              <input type="email" id="email" name="email" placeholder="Email address"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1-222-333-4444"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Write your message"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+            <button type="submit"
+              class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors">
+              Send message
+            </button>
+          </form>
         </div>
-        <div class="v-line"></div>
-        <span>New Era of learning</span>
       </div>
-      <div class="subscribe-letter">
-        <h5>Contact Us for any kind of <span>query</span></h5>
-        <div class="form">
-          <input type="text" id="footer-search" placeholder="Your message" />
-          <button>Send</button>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>© 2024 EduPulse Copyrights reserved.</p>
-      </div>
-    </footer>
+    </div>
+  </section>
 
-    <!-- <div id="top" class="top visible">
+  <footer class="footer mt-6">
+    <div class="edu-logo">
+      <div class="logo">
+        <div class="square"></div>
+        <h4 id="footer-logo">EduPulse</h4>
+      </div>
+      <div class="v-line"></div>
+      <span>New Era of learning</span>
+    </div>
+    <div class="subscribe-letter">
+      <h5>Contact Us for any kind of <span>query</span></h5>
+      <div class="form">
+        <input type="text" id="footer-search" placeholder="Your message" />
+        <button>Send</button>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2024 EduPulse Copyrights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- <div id="top" class="top visible">
       <img
         src="https://img.icons8.com/fluency/48/login-rounded-up.png"
         alt="login-rounded-up"
       />
     </div> -->
-  </body>
+</body>
+
 </html>

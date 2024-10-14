@@ -5,8 +5,7 @@
   --sixty-pr-color: #f1f1f1;
   --thirty-pr-color: #2F327D;
   --ten-pr-color: #545AE7;
-  --shade: #EDEDF6
-  --font-logo: "Nunito", sans-serif;
+  --shade: #EDEDF6 --font-logo: "Nunito", sans-serif;
   --font-list-item: "Poppins", sans-serif;
   --font-hero: "Instrument Sans", sans-serif;
 }
@@ -369,7 +368,7 @@ footer .copyright p {
   .font-poppins {
     font-family: 'Poppins', sans-serif;
   }
-  
+
   .font-rubik {
     font-family: 'Rubik', sans-serif;
   }
@@ -383,13 +382,13 @@ footer .copyright p {
   .about-us-heading {
     font-size: 1.75rem;
   }
-  
+
   .about-us-content {
     width: 95%;
     text-align: center;
     padding: 1rem;
   }
-  
+
   .about-us-content h1 {
     font-size: 1.25rem;
   }
@@ -473,7 +472,7 @@ body {
     height: 170%
   }
 }
-  
+
 
 #top {
   position: fixed;
@@ -510,12 +509,7 @@ body {
   background: var(--sixty-pr-color)
 }
 
-
 /* Departments section */
-
-.relative {
-  position: relative;
-}
 
 .swiper-wrapper {
   height: 495px;
@@ -540,11 +534,11 @@ body {
 }
 
 .swiper-button-next {
-  right: -50px;
+  right: -15px;
 }
 
 .swiper-button-prev {
-  left: -50px;
+  left: -15px;
 }
 
 .swiper-button-next:hover,
@@ -557,7 +551,7 @@ body {
   justify-content: center;
 }
 
-.swiper-slide > div {
+.swiper-slide>div {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
@@ -568,7 +562,7 @@ body {
   border: 1px solid #e2e8f0;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0px 3px 5px 2px rgba(61,58,162,0.75);
+  box-shadow: 0px 3px 5px 2px rgba(61, 58, 162, 0.75);
   max-width: 320px;
   background-color: #EDEDF6;
   justify-self: center;
@@ -596,8 +590,8 @@ body {
   text-decoration: none;
   transition: background-color 0.3s ease;
   border-radius: 8%;
-  display: inline-block; 
-  margin: 0 auto; 
+  display: inline-block;
+  margin: 0 auto;
   overflow: visible;
 }
 
@@ -609,18 +603,18 @@ body {
   .swiper-button-next {
     right: 10px;
   }
-  
+
   .swiper-button-prev {
     left: 10px;
   }
 
-  .swiper-slider > div {
+  .swiper-slider>div {
     zoom: 0.8;
   }
 }
 
 @media (max-width: 760px) {
-  .swiper-slide > div {
+  .swiper-slide>div {
     width: 95%;
   }
 }
@@ -629,12 +623,12 @@ body {
   .swiper-button-next {
     right: 10px;
   }
-  
+
   .swiper-button-prev {
     left: 10px;
   }
 
-  .swiper-slide > div {
+  .swiper-slide>div {
     width: 80%;
   }
 }
@@ -643,7 +637,7 @@ body {
   .swiper-button-next {
     right: 0px;
   }
-  
+
   .swiper-button-prev {
     left: 0px;
   }
@@ -657,13 +651,13 @@ body {
   align-content: center;
 }
 
-.subject-cards > div {
+.subject-cards>div {
   margin-top: 10px;
   height: fit-content;
   max-width: 320px;
   border: 1px solid #e2e8f0;
   border-radius: 20px;
-  box-shadow: 0px 3px 5px 2px rgba(61,58,162,0.75);
+  box-shadow: 0px 3px 5px 2px rgba(61, 58, 162, 0.75);
   background-color: #EDEDF6;
   max-width: 350px;
   width: 100%;
@@ -671,7 +665,7 @@ body {
   align-self: center;
 }
 
-.p-4 > a {
+.subject-cards a {
   background-color: #4846A5;
   color: white;
   padding: 15px;
@@ -680,16 +674,16 @@ body {
   text-decoration: none;
   transition: background-color 0.3s ease;
   border-radius: 8%;
-  display: inline-block; 
-  margin: 0 auto; 
+  display: inline-block;
+  margin: 0 auto;
   overflow: visible;
 }
 
-.p-4 > a:hover {
+.subject-cards a:hover {
   background-color: #3837a7;
 }
 
-.p-4 > img {
+.subject-cards img, .swiper-slide img {
   height: auto;
   width: auto;
   zoom: 0.3;
@@ -697,7 +691,7 @@ body {
 }
 
 @media (max-width: 520px) {
-  .subject-cards > div {
+  .subject-cards>div {
     zoom: 0.8;
   }
 }
