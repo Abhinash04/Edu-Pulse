@@ -8,32 +8,22 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="bg-gray-50 min-h-screen">
-    <header class="header visible bg-white shadow-sm" id="home-header">
-      <nav class="navbar bg-cream flex justify-between items-center px-4 py-4">
-        <div class="logo flex items-center">
-          <div class="square bg-blue-600 h-8 w-8 mr-2"></div>
+    <header class="visible sticky top-0 z-50" id="home-header">
+      <nav class="flex justify-between items-center p-4">
+        <div class="relative flex items-center justify-center">
           <a href="index.html#home">
-            <h4 class="text-blue-600 font-bold text-xl">EduPulse</h4>
+            <h4
+              id="header-logo"
+              class="relative ml-4 text-purple-700 text-4xl font-bold tracking-wider"
+            >
+              EduPulse
+            </h4>
           </a>
         </div>
         <a
           href="index.html#home"
-          class="flex items-center px-4 py-2 text-gray-600 hover:text-blue-600"
+          class="flex items-center px-4 py-2 text-gray-800 hover:text-purple-700 font-bold"
         >
-          <svg
-            class="mr-2 h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M3 12h18M3 6h18M3 18h18"
-            ></path>
-          </svg>
           Home
         </a>
       </nav>
@@ -41,47 +31,61 @@
 
     <main class="container mx-auto px-4 py-8">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <!-- Department Dropdown -->
         <div class="relative">
-          <input
+          <select
             id="department-input"
-            type="text"
-            placeholder="Department"
-            class="w-full border border-gray-300 rounded-md p-2"
-          />
-          <ul
-            id="department-suggestions"
-            class="absolute z-10 w-full bg-white border border-gray-300 rounded-md mt-1 max-h-40 overflow-auto hidden"
-          ></ul>
+            class="w-full bg-white border border-gray-300 rounded-lg p-4 shadow-md appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+          >
+            <option value="">Select Department</option>
+            <option value="CSE">Computer Science Engineering</option>
+            <option value="IT">Information Technology</option>
+            <option value="ME">Mechanical Engineering</option>
+            <option value="AIR">AI & Robotics</option>
+            <option value="EE">Electrical Engineering</option>
+            <option value="EnI">Electrical & Instrumentation</option>
+            <option value="CE">Civil Engineering</option>
+            <option value="BT">Biotechnology</option>
+            <option value="MnC">Mathematics and Computing</option>
+            <option value="Phy">Physics</option>
+            <option value="Chem">Chemistry</option>
+          </select>
         </div>
+
+        <!-- Semester Dropdown -->
         <div class="relative">
-          <input
+          <select
             id="semester-input"
-            type="text"
-            placeholder="Semester"
-            class="w-full border border-gray-300 rounded-md p-2"
-          />
-          <ul
-            id="semester-suggestions"
-            class="absolute z-10 w-full bg-white border border-gray-300 rounded-md mt-1 max-h-40 overflow-auto hidden"
-          ></ul>
+            class="w-full bg-white border border-gray-300 rounded-lg p-4 shadow-md appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+          >
+            <option value="">Select Semester</option>
+            <option value="First">First</option>
+            <option value="Second">Second</option>
+            <option value="Third">Third</option>
+            <option value="Fourth">Fourth</option>
+            <option value="Fifth">Fifth</option>
+            <option value="Sixth">Sixth</option>
+            <option value="Seventh">Seventh</option>
+            <option value="Eighth">Eighth</option>
+            <option value="Ninth">Ninth</option>
+            <option value="Tenth">Tenth</option>
+          </select>
         </div>
+
+        <!-- Subject input -->
         <div class="relative">
           <input
             id="subject-input"
             type="text"
             placeholder="Subject or Course Code"
-            class="w-full border border-gray-300 rounded-md p-2"
+            class="w-full bg-white border border-gray-300 rounded-lg p-4 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          <ul
-            id="subject-suggestions"
-            class="absolute z-10 w-full bg-white border border-gray-300 rounded-md mt-1 max-h-40 overflow-auto hidden"
-          ></ul>
         </div>
       </div>
 
       <div
         id="subject-cards"
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center"
       >
         <!-- Subject cards will be dynamically inserted here -->
       </div>
@@ -93,92 +97,157 @@
           id: 1,
           title: "Mathematics 1",
           code: "MATH101",
-          department: "Mathematics",
+          department: ["CSE", "IT", "ME", "EE", "EnI", "AIR", "CE", "BT"],
           semester: "First",
           image: "/placeholder.svg?height=100&width=200",
-          driveLink: "https://drive.google.com",
+          notes:
+            "https://drive.google.com/file/d/1p7hq2SIG-JT97MVqIgkb5yRJ0GEmF-Zy/view?usp=drive_link",
+          syllabus:
+            "https://drive.google.com/file/d/1nTjqLIYNqLsQN9lr2OZ2Do1PMPpgrWSK/view?usp=drive_link",
+          pyq: "https://drive.google.com/file/d/1x-LmDLmk2Ir8701vUwgpw-6qWc3CuKSd/view?usp=drive_link",
+          resource:
+            "https://drive.google.com/drive/folders/1yfPoWVRUh62vfSMh1pNaPI6AYM7weEhk?usp=drive_link",
         },
         {
           id: 2,
           title: "Mathematics 2",
           code: "MATH102",
-          department: "Mathematics",
+          department: ["CSE", "IT", "ME", "EE", "EnI", "AIR", "CE", "BT"],
           semester: "Second",
           image: "/placeholder.svg?height=100&width=200",
-          driveLink: "https://drive.google.com",
+          notes:
+            "https://drive.google.com/file/d/1MzknvV5Qe-BrJmek4b3BFVDTxhOSnfwu/view?usp=drive_link",
+          syllabus:
+            "https://drive.google.com/file/d/1JPZh8cldP8h6-viqjZF5NR3rBLAr24_7/view?usp=drive_link",
+          pyq: "https://drive.google.com/file/d/1x-LmDLmk2Ir8701vUwgpw-6qWc3CuKSd/view?usp=drive_link",
+          resource:
+            "https://drive.google.com/drive/folders/1BRxl43N8I2vQYmKhPbW80vgWQhtvjxib?usp=drive_link",
         },
         {
           id: 3,
           title: "Mathematics 3",
           code: "MATH103",
-          department: "Mathematics",
+          department: ["CSE", "IT", "ME", "EE", "EnI", "AIR", "CE", "BT"],
           semester: "Third",
           image: "/placeholder.svg?height=100&width=200",
-          driveLink: "https://drive.google.com",
+          notes:
+            "https://drive.google.com/file/d/132gKizdWGlPJpBAWiAxocmi2nFzRoXCM/view?usp=drive_link",
+          syllabus:
+            "https://drive.google.com/file/d/10yPFkL359TSS8AxJpiNjdosRxlz-IjIF/view?usp=drive_link",
+          pyq: "",
+          resource:
+            "https://drive.google.com/drive/folders/1Dd_f_oSKq2HIGqlFBfPN3nEAGKQmCO2U?usp=drive_link",
         },
         {
           id: 4,
           title: "Discrete Mathematics",
           code: "MATH104",
-          department: "Mathematics",
+          department: ["CSE", "IT", "ME", "EE", "EnI", "AIR", "CE", "BT"],
           semester: "Fourth",
           image: "/placeholder.svg?height=100&width=200",
-          driveLink: "https://drive.google.com",
+          notes:
+            "https://drive.google.com/file/d/1p7hq2SIG-JT97MVqIgkb5yRJ0GEmF-Zy/view?usp=drive_link",
+          syllabus:
+            "https://drive.google.com/file/d/1nTjqLIYNqLsQN9lr2OZ2Do1PMPpgrWSK/view?usp=drive_link",
+          pyq: "https://drive.google.com/file/d/1x-LmDLmk2Ir8701vUwgpw-6qWc3CuKSd/view?usp=drive_link",
+          resource: "",
         },
         {
           id: 5,
           title: "Chemistry",
           code: "CHEM101",
-          department: "Chemistry",
+          department: ["CSE", "IT", "ME", "EE", "EnI", "AIR", "CE", "BT"],
           semester: "First",
           image: "/placeholder.svg?height=100&width=200",
-          driveLink: "https://drive.google.com",
+          notes:
+            "https://docs.google.com/presentation/d/1VXTs9s-Xqqhp-olWTD5JMVk0p1CE0PrX/edit?usp=drive_link&ouid=115541983784796554622&rtpof=true&sd=true",
+          syllabus:
+            "https://drive.google.com/file/d/1nTjqLIYNqLsQN9lr2OZ2Do1PMPpgrWSK/view?usp=drive_link",
+          pyq: "",
+          resource:
+            "https://drive.google.com/drive/folders/1Vj_wxzxoBnSsyKPgJ1fHA4ErhDtm0klB?usp=drive_link",
         },
         {
           id: 6,
           title: "Physics",
           code: "PHY101",
-          department: "Physics",
+          department: ["CSE", "IT", "ME", "EE", "EnI", "AIR", "CE", "BT"],
           semester: "Second",
           image: "/placeholder.svg?height=100&width=200",
-          driveLink: "https://drive.google.com",
+          notes: "",
+          syllabus:
+            "https://drive.google.com/file/d/1nTjqLIYNqLsQN9lr2OZ2Do1PMPpgrWSK/view?usp=drive_link",
+          pyq: "https://drive.google.com/file/d/1x-LmDLmk2Ir8701vUwgpw-6qWc3CuKSd/view?usp=drive_link",
+          resource:
+            "https://drive.google.com/drive/folders/1RfTT3TssT8EyE04-kBrOOmYCrbVQLei8?usp=drive_link",
+        },
+        {
+          id: 7,
+          title: "Engineering Economics",
+          code: "EE101",
+          department: [
+            "CSE",
+            "IT",
+            "ME",
+            "EE",
+            "EnI",
+            "AIR",
+            "CE",
+            "BT",
+            "MnC",
+            "Phy",
+            "Chem",
+          ],
+          semester: "Third",
+          image:
+            "https://drive.google.com/thumbnail?id=1sk1h1GbF_jkLEbrfc8NZvNIZGnd0qswl&sz=w1026-h1026",
+          notes:
+            "https://drive.google.com/file/d/14dSuSAqKwMv9ZP_bm_5bWar_bsIRG_xX/view?usp=drive_link",
+          syllabus:
+            "https://drive.google.com/file/d/10XmbFZ3yX9gnyUzh7Fme4o95BIM5fvYE/view?usp=drive_link",
+          pyq: "",
+          resource:
+            "https://drive.google.com/drive/folders/1zGo0whR-7icioRtLI8fWXBCPrgOKGnt_?usp=drive_link",
+        },
+        {
+          id: 8,
+          title: "Digital Electronics",
+          code: "DE101",
+          department: ["EnI"],
+          semester: "Third",
+          image:
+            "https://drive.google.com/thumbnail?id=1eR_hkcznl8KCAWKROkkQPLPjv33fDgqy&sz=w1026-h1026",
+          notes: "",
+          syllabus: "",
+          pyq: "",
+          resource: "",
+        },
+        {
+          id: 9,
+          title: "Object Oriented Programming",
+          code: "OP101",
+          department: ["CSE", "IT"],
+          semester: "Third",
+          image:
+            "https://drive.google.com/thumbnail?id=1173czQpnNpvCBiDiY9OavsHBsNz1ikaZ&sz=w1026-h1026",
+          notes:
+            "https://drive.google.com/file/d/1HqsyxSzeBILJmTdh2tV1uEf4eH3hkD9A/view?usp=drive_link",
+          syllabus: "",
+          pyq: "https://drive.google.com/file/d/1LNi4OgoZSCQo2967Jk4cVFWpXcXo9qeK/view?usp=drive_link",
+          resource:
+            "https://drive.google.com/drive/folders/18p5Vnt-99V3vhJuEHHmZbcUMmP9gerKv?usp=drive_link",
         },
       ];
 
       function filterSubjects(department, semester, subject) {
         return subjects.filter(
           (s) =>
-            s.department.toLowerCase().includes(department.toLowerCase()) &&
-            s.semester.toLowerCase().includes(semester.toLowerCase()) &&
-            (s.title.toLowerCase().includes(subject.toLowerCase()) ||
+            (!department || s.department.includes(department)) &&
+            (!semester || s.semester === semester) &&
+            (!subject ||
+              s.title.toLowerCase().includes(subject.toLowerCase()) ||
               s.code.toLowerCase().includes(subject.toLowerCase()))
         );
-      }
-
-      function handleInputChange(input, suggestionsId, field) {
-        const value = input.value.toLowerCase();
-        const suggestions = Array.from(
-          new Set(subjects.map((s) => s[field].toLowerCase()))
-        ).filter((v) => v.includes(value));
-        const suggestionsList = document.getElementById(suggestionsId);
-
-        suggestionsList.innerHTML = suggestions
-          .map(
-            (suggestion) =>
-              `<li class="px-4 py-2 hover:bg-blue-100 cursor-pointer">${suggestion}</li>`
-          )
-          .join("");
-        suggestionsList.classList.toggle("hidden", suggestions.length === 0);
-
-        // Add click event listener to suggestions
-        const suggestionItems = suggestionsList.querySelectorAll("li");
-        suggestionItems.forEach((item) => {
-          item.addEventListener("click", () => {
-            input.value = item.textContent;
-            suggestionsList.classList.add("hidden"); // Hide suggestions after selection
-            renderCards();
-          });
-        });
       }
 
       document.addEventListener("DOMContentLoaded", () => {
@@ -186,20 +255,6 @@
         const semesterInput = document.getElementById("semester-input");
         const subjectInput = document.getElementById("subject-input");
         const subjectCards = document.getElementById("subject-cards");
-
-        departmentInput.addEventListener("input", () =>
-          handleInputChange(
-            departmentInput,
-            "department-suggestions",
-            "department"
-          )
-        );
-        semesterInput.addEventListener("input", () =>
-          handleInputChange(semesterInput, "semester-suggestions", "semester")
-        );
-        subjectInput.addEventListener("input", () =>
-          handleInputChange(subjectInput, "subject-suggestions", "title")
-        );
 
         function renderCards() {
           const filtered = filterSubjects(
@@ -210,27 +265,74 @@
           subjectCards.innerHTML = filtered
             .map(
               (s) => `
-          <div class="overflow-hidden border rounded-lg shadow-md">
-            <img src="${s.image}" alt="${s.title}" class="w-full h-40 object-cover" />
-            <div class="p-4">
-              <h2 class="text-lg font-semibold mb-2">${s.title}</h2>
-              <p class="text-sm text-gray-600">${s.code}</p>
-              <a href="${s.driveLink}" target="_blank">
-                <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
-                  Explore
-                </button>
-              </a>
-            </div>
-          </div>
-        `
+              <div class="flex flex-col justify-between border bg-white rounded-lg shadow-lg overflow-hidden h-auto w-11/12">
+                <div class="p-4">
+                  <div class="w-full h-52 flex justify-center">
+                    <img src="${s.image}" alt="${s.title}" class="object-contain" />
+                  </div>
+                  <h2 class="text-lg font-semibold mb-2 text-center">${s.title}</h2>
+                  <p class="text-sm text-gray-600 text-center">${s.code}</p>
+                  <button class="w-full mt-4 bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 explore-btn" data-subject-id="${s.id}">
+                    Explore
+                  </button>
+                </div>
+              </div>
+              `
             )
             .join("");
+
+          // Attach events to the "Explore" buttons
+          const exploreButtons = document.querySelectorAll(".explore-btn");
+          exploreButtons.forEach((button) => {
+            button.addEventListener("click", (e) => {
+              const subjectId = e.target.getAttribute("data-subject-id");
+              const subject = subjects.find((s) => s.id == subjectId);
+              renderSubjectPage(subject);
+            });
+          });
         }
 
-        departmentInput.addEventListener("input", renderCards);
-        semesterInput.addEventListener("input", renderCards);
+        departmentInput.addEventListener("change", renderCards);
+        semesterInput.addEventListener("change", renderCards);
         subjectInput.addEventListener("input", renderCards);
 
+        function renderSubjectPage(subject) {
+          document.body.innerHTML = `
+            <class="p-4">
+              <button id="back-button" class="bg-gray-300 px-4 py-2 rounded-md hover:bg-gray-400 mb-4">
+                Back
+              </button>
+              <h1 class="text-4xl font-bold mb-8 text-center">${subject.title}</h1>
+              <div class="flex flex-wrap justify-center gap-6 mb-8 mt-10">
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 shadow-xl w-full sm:w-auto text-lg">
+                  <a href="${subject.notes}" target="_blank">Handwritten Notes</a>
+                </button>
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 shadow-xl w-full sm:w-auto text-lg">
+                  <a href="${subject.syllabus}" target="_blank">Syllabus</a>
+                </button>
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 shadow-xl w-full sm:w-auto text-lg">
+                  <a href="${subject.pyq}" target="_blank">PYQs</a>
+                </button>
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 shadow-xl w-full sm:w-auto text-lg">
+                  <a href="${subject.resource}" target="_blank">Resources</a>
+                </button>
+              </div>
+              <!-- About Section -->
+              <div class="bg-white p-6 shadow-md rounded-lg text-center max-w-4xl mx-auto">
+                <h2 class="text-2xl font-semibold mb-4">About ${subject.title}</h2>
+                <p class="text-gray-600 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam illo voluptatem voluptatibus similique iure in animi totam, eum provident at neque distinctio ab eveniet placeat eaque labore aliquid, fuga ea nulla adipisci nesciunt beatae molestiae sint maiores! Eligendi autem earum reprehenderit libero quo perferendis minima ipsa voluptate enim labore optio rerum, incidunt numquam aut repellat accusamus minus nam, sunt animi tempora corporis provident magnam blanditiis. Dolores nihil, veniam, iusto accusantium vero impedit fugiat quia eveniet corrupti dolor tempore quidem similique eligendi exercitationem dicta quisquam sapiente sit magnam officiis ipsa rerum. Aspernatur sequi minus similique at sunt voluptas laudantium autem quas!</p>
+              </div>
+            </div>
+          `;
+
+          document
+            .getElementById("back-button")
+            .addEventListener("click", () => {
+              window.location.reload(); // Refresh the page to go back to the main subject page
+            });
+        }
+
+        // Initially render the full list of subjects
         renderCards();
       });
     </script>

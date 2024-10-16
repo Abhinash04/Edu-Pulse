@@ -14,122 +14,130 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Tailwind css -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "thirty-pr-color": "#3b82f6",
-              "ten-pr-color": "#f59e0b",
-            },
-            fontFamily: {
-              poppins: ["Poppins", "sans-serif"],
-            },
+  <!-- lucide icons -->
+  <script src="https://unpkg.com/lucide@0.24.0/dist/lucide.js"></script>
+
+  <!-- Tailwind css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "thirty-pr-color": "#3b82f6",
+            "ten-pr-color": "#f59e0b",
+          },
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
           },
         },
-      };
-    </script>
-    <!-- custom css -->
-    <link rel="stylesheet" href="styles.css" />
+      },
+    };
+  </script>
+  <!-- custom css -->
+  <link rel="stylesheet" href="styles.css" />
 
   <!-- javascript -->
   <script src="script.js"></script>
 </head>
 
-<body>
+<body class="bg-purple-50 min-h-[500px]">
   <!-- header design -->
-  <header class="header visible" id="home-header">
-    <nav class="navbar bg-cream">
-      <div class="logo">
-        <div class="square"></div>
-        <a href="/">
-          <h4>EduPulse</h4>
-        </a>
+  <header class="visible sticky top-0 z-50 bg-white" id="home-header">
+    <nav class="flex justify-between items-center p-4">
+      <!-- EduPulse Logo on the left corner -->
+      <div class="relative flex items-center">
+        <h4 id="header-logo" class="relative text-purple-700 text-4xl font-bold tracking-wider">EduPulse</h4>
       </div>
-      <ul class="nav-list">
-        <li><a href="#home">Home</a></li>
-        <li><a href="subject.html">Subject</a></li>
-        <li><a href="#wcu-heading">Why EduPulse</a></li>
-        <li><a href="#about-us-container">About Us</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+  
+      <!-- Centered Desktop Menu -->
+      <ul class="nav-list hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-8 font-bold">
+        <li><a href="#home" class="text-gray-800 hover:text-purple-700">Home</a></li>
+        <li><a href="#subject" class="text-gray-800 hover:text-purple-700">Subject</a></li>
+        <li><a href="#wcu-heading" class="text-gray-800 hover:text-purple-700">Why EduPulse</a></li>
+        <li><a href="#about" class="text-gray-800 hover:text-purple-700">About Us</a></li>
+        <li><a href="#contact" class="text-gray-800 hover:text-purple-700">Contact Us</a></li>
       </ul>
-
-      <!-- <div class="bx bx-user" id="user-icon"></div>
-
-            <div class="notes">
-                <button id="notes" onclick="">My Notes</button>
-            </div>
-
-            <div class="bx bx-menu" id="menu-icon"></div> -->
+  
+      <!-- Right-aligned Button for Mobile & Desktop -->
+      <div class="flex items-center space-x-4">
+        <!-- My Notes Button -->
+        <button onclick="window.location.href='subject.html';" class="hidden sm:inline-flex bg-purple-600 text-white px-3 py-2 rounded-md" id="nav-btn">
+          My Notes
+        </button>
+  
+        <!-- Mobile Menu Toggle -->
+        <button class="text-gray-600 hover:text-gray-800 sm:hidden" aria-label="Toggle mobile menu" id="menu-toggle" onclick="toggleMenu()">
+          <!-- Menu Icon -->
+          <svg id="menu-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Close Icon -->
+          <svg id="menu-close" xmlns="http://www.w3.org/2000/svg" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
     </nav>
+  
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white p-4">
+      <nav class="flex flex-col space-y-4 text-gray-600">
+        <a href="#home" class="text-gray-800 hover:text-purple-700">Home</a>
+        <a href="#subject" class="text-gray-800 hover:text-purple-700">Subject</a>
+        <a href="#wcu-heading" class="text-gray-800 hover:text-purple-700">Why EduPulse</a>
+        <a href="#about" class="text-gray-800 hover:text-purple-700">About Us</a>
+        <a href="#contact" class="text-gray-800 hover:text-purple-700">Contact Us</a>
+        <!-- My Notes Button for Mobile -->
+        <button onclick="window.location.href='subject.html';" class="bg-purple-600 text-white px-3 py-2 rounded-md w-full">
+          All Notes
+        </button>
+      </nav>
+    </div>
   </header>
+  
+  <script>
+    // Toggle mobile menu visibility and swap icons
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const menuOpenIcon = document.getElementById('menu-open');
+      const menuCloseIcon = document.getElementById('menu-close');
+  
+      menu.classList.toggle('hidden');
+      menuOpenIcon.classList.toggle('hidden');
+      menuCloseIcon.classList.toggle('hidden');
+    }
+  </script>
 
   <!-- Home Section -->
   <section id="home">
-    <div class="relative py-12 bg-white sm:py-16 lg:py-20">
-      <div class="absolute inset-0">
-        <img class="object-cover object-right w-full h-full lg:object-center"
-          src="https://outr.ac.in/public/uploads/QT-odisha_1.png" alt="" />
-      </div>
-
-      <div class="absolute inset-0 bg-gray-900 bg-opacity-40"></div>
-
-      <div class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-        <div class="max-w-lg mx-auto text-center xl:max-w-2xl">
-          <h1 class="text-3xl font-bold text-white sm:text-4xl xl:text-5xl">
-            Find the best exam resources in one tap
-          </h1>
-          <p class="max-w-lg mx-auto mt-6 text-base font-normal leading-7 text-gray-300">
-            Get the best quality Handwritten Notes, Previous Year Question
-            Paper, Important Questions and Syllabus Explanation
-          </p>
-
-          <form action="#" class="max-w-xl mx-auto mt-10">
-            <div>
-              <label for="" class="sr-only"> Search </label>
-              <div class="relative">
-                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                  <svg class="w-5 h-5 text-indigo-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </div>
-
-                <input type="text" name="" id="" placeholder="Try IT, CSE, DAA etc..."
-                  class="block w-full py-3 pl-10 pr-4 text-base font-normal leading-7 text-indigo-900 placeholder-indigo-500 bg-white border border-white focus:ring-white focus:border-white focus:ring-offset-2" />
-              </div>
-            </div>
-
-            <div>
-              <button type="submit"
-                class="inline-flex items-center justify-center w-full px-6 py-4 text-sm font-bold tracking-widest text-white uppercase transition-all duration-200 bg-indigo-900 border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-white hover:bg-indigo-600">
-                Search now
-              </button>
-            </div>
-          </form>
-
-          <!-- <div
-              class="grid max-w-md grid-cols-2 mx-auto mt-8 md:mt-16 lg:mt-24 xl:mt-32 gap-x-6 grid-col-2"
-            >
-              <div>
-                <p class="text-4xl font-bold text-white">38,942</p>
-                <p class="mt-2 text-sm font-medium text-gray-300">
-                  Order Delivered
-                </p>
-              </div>
-
-              <div>
-                <p class="text-4xl font-bold text-white">14,344</p>
-                <p class="mt-2 text-sm font-medium text-gray-300">
-                  Registered Customers
-                </p>
-              </div>
-            </div> -->
+    <div class="container mx-auto px-4 py-12 md:py-24 flex flex-col-reverse md:flex-row items-center justify-center">
+      <div class="md:w-1/2 space-y-6 text-center md:text-center">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-700">Ace Your Exams</h2>
+        <h3 class="text-5xl md:text-6xl font-bold text-gray-700">
+          Build your <span class="text-purple-700">future</span>
+        </h3>
+        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center">
+          <div class="relative flex-grow">
+            <svg id="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" placeholder="search anything" class="w-full pl-10 pr-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500" />
+          </div>
+          <div class="relative">
+            <select class="appearance-none w-full md:w-48 px-4 py-3 rounded-full border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-700">
+              <option>All categories</option>
+              <option value="math">Mathematics</option>
+              <option value="science">Science</option>
+              <option value="history">History</option>
+              <option value="literature">Literature</option>
+              <!-- Add more options here -->
+            </select>
+            <svg id="chevron-down" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
         </div>
+      </div>
+      <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+        <img src="C:\Users\canad\OneDrive\Desktop\_EduPulse_\assets\images\heroinebg.png" alt="Student studying" class="w-[70%] h-[70%]" />
       </div>
     </div>
   </section>
@@ -402,7 +410,7 @@
     <!-- Initialize Swiper -->
     <script>
       var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 30,
         navigation: {
           nextEl: ".swiper-button-next",
@@ -424,195 +432,178 @@
         },
       });
     </script>
-<!-- Why Choose Us -->
-  <section id="wcu-heading">
-    <h1><strong>Why <span>Choose Us?</span></strong></h1>
-    <div class="why-choose-us">
-      <div class="pic">
-        <img src="https://drive.google.com/file/d/1YybeFLRo-3OwrNCnxx5JyzNIBy3vDF6r/view?usp=drive_link" alt="">
-      </div>
-      <div class="grid-container">
-        <div class="grid-container-1">
-          <div class="point-1">
-            <div class="flex">
-              <img src="/assets/images/notebook with glasses and pencil.png" alt="" srcset="">
-              <div class="flex-col">
-                <h3>Organised study material</h3>
-                <p>categorized notes and resources, ensuring students can find what they need quickly, saving valuable
-                  study </p>
-              </div>
-            </div>
 
+
+    <!-- Why Choose Us -->
+    <section class="py-16 px-4 md:px-8" id="wcu-heading">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          Why <span class="text-indigo-600">Choose us ?</span>
+        </h2>
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+          <div class="md:w-1/3">
+            <img src="C:\Users\canad\OneDrive\Desktop\_EduPulse_\assets\images\boy choose.png" alt="Student thinking" class="w-full h-auto" />
           </div>
-          <div class="point-2">
-            <div class="flex">
-              <img src="/assets/images/little boy studying online.png" alt="" srcset="">
-              <div class="flex-col">
-                <h3>Accessible Anytime Anywhere</h3>
-                <p>our platform is accessible across devices, ensuring you can study whenever it’s convenient for you.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="grid-container-2">
-          <div class="point-3">
-            <div class="flex">
-              <img src="/assets/images/Learning geography with a virtual globe.png" alt="" srcset="">
-              <div class="flex-col">
-                <h3>Regularly Updated Content</h3>
-                <p>Stay ahead with notes that are constantly updated to reflect the latest academic curriculum and exam
-                  patterns.</p>
-              </div>
-
-            </div>
-
-          </div>
-          <div class="point-4">
-            <div class="flex">
-              <img src="/assets/images/books and cup.png" alt="" srcset="">
-              <div class="flex-col">
-                <h3>Support mulitple subjects</h3>
-                <p>we offer resources across a range of subjects ,helping you excel in your studies</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- About Section -->
-  <div class="main-container">
-    <div class="content-wrapper">
-      <h1 class="title">About Us</h1>
-      <section class="cards-container">
-        <article class="card">
-          <h2 class="card-title">Our Mission</h2>
-          <p>We strive to deliver innovative solutions that empower businesses and individuals to reach their full potential in the digital world.</p>
-        </article>
-        <article class="card">
-          <h2 class="card-title">Our Team</h2>
-          <p>Our diverse team of experts brings together a wealth of knowledge and experience from various fields to tackle complex challenges.</p>
-        </article>
-        <article class="card">
-          <h2 class="card-title">Our Values</h2>
-          <p>Integrity, collaboration, and continuous improvement are at the core of everything we do, guiding our decisions and actions.</p>
-        </article>
-      </section>
-    </div>
-  </div>
-
-  <!-- Contact Section -->
-  <section class="contact py-16 px-4 md:px-8 lg:px-16 bg-[#f1f1f1]" id="contact">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <!-- Left Side -->
-        <div class="space-y-8">
-          <div class="space-y-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 flex items-center">
-              Love to hear from you,
-              <span class="inline-block ml-2">👋</span>
-            </h2>
-            <p class="text-gray-600">
-              We provide resources for OUTR students that are very detailed
-              and covers all the topics of syllabus By refering to these notes
-              and exam material you can ace you semester exam. As Engineering
-              students we have our motto: <br />
-              <b>if tomorrow isn't the due date, then today isn't the do
-                date</b>
-              <br />So to tackel this we provide you exam resources that will
-              help you ace your exams.
-            </p>
-          </div>
-
-          <!-- Testimonial Card -->
-          <div
-            class="bg-blue-600 text-white p-6 rounded-2xl shadow-lg transform -rotate-2 transition-transform hover:rotate-0">
-            <div class="flex mb-4">
-              <span class="w-5 h-5 fill-current">⭐</span>
-              <span class="w-5 h-5 fill-current">⭐</span>
-              <span class="w-5 h-5 fill-current">⭐</span>
-              <span class="w-5 h-5 fill-current">⭐</span>
-              <span class="w-5 h-5 fill-current">⭐</span>
-            </div>
-            <p class="mb-4">
-              "Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Sapiente hic itaque ex temporibus ipsum beatae similique nulla
-              accusantium amet unde laudantium in vel consequuntur quo minima
-              aut, rerum deserunt nostrum?"
-            </p>
-            <div class="flex items-center">
-              <img src="https://via.placeholder.com/40" alt="Subham Parida" class="rounded-full mr-3" />
+          <div class="md:w-2/3 space-y-6">
+            <div class="flex items-start gap-4 pb-6 border-b border-yellow-400">
+              <img src="C:\Users\canad\OneDrive\Desktop\_EduPulse_\assets\images\books and cup.png" alt="Organised study material" class="w-10 h-10 flex-shrink-0" />
               <div>
-                <p class="font-semibold">Subham Parida</p>
-                <p class="text-sm opacity-75">Co-ordinator, Zairza</p>
+                <h3 class="font-bold text-2xl text-indigo-600 mb-2">Organised study material</h3>
+                <p class="text-black text-lg font-semibold">Categorized notes and resources, ensuring students can find what they need quickly, saving valuable study time.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 pb-6 border-b border-orange-400 font-bold">
+              <img src="C:\Users\canad\OneDrive\Desktop\_EduPulse_\assets\images\Learning geography with a virtual globe.png" alt="Accessible Anytime Anywhere" class="w-10 h-10 flex-shrink-0" />
+              <div>
+                <h3 class="font-bold text-2xl text-indigo-600 mb-2">Accessible Anytime Anywhere</h3>
+                <p class="text-black text-lg font-semibold">Our platform is accessible across devices, ensuring you can study whenever it’s convenient for you.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 pb-6 border-b border-blue-400">
+              <img src="C:\Users\canad\OneDrive\Desktop\_EduPulse_\assets\images\notebook with glasses and pencil.png" alt="Regularly Updated Content" class="w-10 h-10 flex-shrink-0" />
+              <div>
+                <h3 class="font-bold text-2xl text-indigo-600 mb-2">Regularly Updated Content</h3>
+                <p class="text-black text-lg font-semibold">Stay ahead with notes that are constantly updated to reflect the latest academic curriculum and exam patterns.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <img src="C:\Users\canad\OneDrive\Desktop\_EduPulse_\assets\images\little boy studying online.png" alt="Support multiple subjects" class="w-10 h-10 flex-shrink-0" />
+              <div>
+                <h3 class="font-bold text-2xl text-indigo-600 mb-2">Support multiple subjects:</h3>
+                <p class="text-black text-lg font-semibold">We offer resources across a range of subjects, helping you excel in your studies.</p>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Right Side - Contact Form -->
-        <div class="bg-white p-8 rounded-lg shadow-md">
-          <h3 class="text-2xl font-bold mb-6">Send us a message</h3>
-          <form class="space-y-4" id="contactForm">
-            <div>
-              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
-            </div>
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-              <input type="email" id="email" name="email" placeholder="Email address"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
-            </div>
-            <div>
-              <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-              <input type="tel" id="phone" name="phone" placeholder="+1-222-333-4444"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
-            </div>
-            <div>
-              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="Write your message"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-            </div>
-            <button type="submit"
-              class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors">
-              Send message
-            </button>
-          </form>
-        </div>
+      </div>
+    </section>
+    
+  
+    
+    <!-- About Section -->
+    <div class="p-8" id="about">
+      <div class="max-w-6xl mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-8">About <span class="text-[#4846A5]">EduPulse</span></h1>
+        <section class="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <article class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+            <h2 class="text-xl font-bold mb-4 text-[#4a4aff]">Our Mission</h2>
+            <p>We strive to deliver innovative solutions that empower businesses and individuals to reach their full potential in the digital world.</p>
+          </article>
+          <article class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+            <h2 class="text-xl font-bold mb-4 text-[#4a4aff]">Our Team</h2>
+            <p>Our diverse team of experts brings together a wealth of knowledge and experience from various fields to tackle complex challenges.</p>
+          </article>
+          <article class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+            <h2 class="text-xl font-bold mb-4 text-[#4a4aff]">Our Values</h2>
+            <p>Integrity, collaboration, and continuous improvement are at the core of everything we do, guiding our decisions and actions.</p>
+          </article>
+        </section>
       </div>
     </div>
-  </section>
+
+    <!-- Contact Section -->
+    <section class="contact py-16 px-4 md:px-8 lg:px-16 bg-[#f1f1f1]" id="contact">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- Left Side -->
+          <div class="space-y-8">
+            <div class="space-y-4">
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-900 flex items-center">
+                Love to hear from you,
+                <span class="inline-block ml-2">👋</span>
+              </h2>
+              <p class="text-gray-600">
+                We provide resources for OUTR students that are very detailed
+                and covers all the topics of syllabus By refering to these notes
+                and exam material you can ace you semester exam. As Engineering
+                students we have our motto: <br />
+                <b>if tomorrow isn't the due date, then today isn't the do
+                  date</b>
+                <br />So to tackel this we provide you exam resources that will
+                help you ace your exams.
+              </p>
+            </div>
+
+            <!-- Testimonial Card -->
+            <div
+              class="bg-blue-600 text-white p-6 rounded-2xl shadow-lg transform -rotate-2 transition-transform hover:rotate-0">
+              <div class="flex mb-4">
+                <span class="w-5 h-5 fill-current">⭐</span>
+                <span class="w-5 h-5 fill-current">⭐</span>
+                <span class="w-5 h-5 fill-current">⭐</span>
+                <span class="w-5 h-5 fill-current">⭐</span>
+                <span class="w-5 h-5 fill-current">⭐</span>
+              </div>
+              <p class="mb-4">
+                "Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Sapiente hic itaque ex temporibus ipsum beatae similique nulla
+                accusantium amet unde laudantium in vel consequuntur quo minima
+                aut, rerum deserunt nostrum?"
+              </p>
+              <div class="flex items-center">
+                <img src="https://via.placeholder.com/40" alt="Subham Parida" class="rounded-full mr-3" />
+                <div>
+                  <p class="font-semibold">Subham Parida</p>
+                  <p class="text-sm opacity-75">Co-ordinator, Zairza</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side - Contact Form -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold mb-6">Send us a message</h3>
+            <form class="space-y-4" id="contactForm">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email address"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1-222-333-4444"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write your message"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+              </div>
+              <button type="submit"
+                class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors">
+                Send message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
-  <footer class="footer">
-    <div class="footer-content">
-        <div class="logo-section">
-            <div class="logo">EDU-PULSE</div>
-            <div class="tagline">New Era of Learning</div>
+    <footer class="bg-[#4846A5] text-center py-12 flex flex-col gap-4 rounded-t-[25%] mt-6">
+      <div class="flex justify-center items-center gap-4">
+        <div class="relative flex items-center justify-center">
+          <div class="w-12 h-12 bg-[#a77deb] rotate-45 absolute rounded-sm animate-pulse shadow-lg"></div>
+          <h4 id="footer-logo" class="relative ml-4 text-4xl font-bold tracking-wider text-white">EduPulse</h4>
         </div>
-        <div class="contact-form">
-            <h3>Didn't find what you need? Contact Us </h3>
-            <input type="text" placeholder="Your message" aria-label="Your message">
-            <button type="button">Send</button>
+        <div class="w-[4px] h-16 bg-white ml-6"></div>
+        <span class="text-md text-white font-bold">New Era of learning</span>
+      </div>
+      <div class="mt-4">
+        <h5 class="text-white text-md font-bold mb-2">Contact Us for any kind of query</h5>
+        <div class="flex justify-center">
+          <input type="text" id="footer-search" class="border border-white bg-transparent px-4 py-2 rounded text-sm text-white mr-4" placeholder="Your message" />
+          <button class="bg-white shadow-lg px-4 py-2 rounded text-black font-bold text-xl">Send</button>
         </div>
-        <div class="copyright">
-            © 2023 EDU-PULSE. Copyrights reserved.
-        </div>
-    </div>
-</footer>
-<div class="scroll-top" role="button" aria-label="Scroll to top">
-    &#9650;
-</div>
-
-  <!-- <div id="top" class="top visible">
-      <img
-        src="https://img.icons8.com/fluency/48/login-rounded-up.png"
-        alt="login-rounded-up"
-      />
-    </div> -->
+      </div>
+      <div>
+        <p class="text-white font-bold text-md mt-4">© 2024 EduPulse. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
