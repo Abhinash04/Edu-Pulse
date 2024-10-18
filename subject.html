@@ -10,6 +10,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body class="bg-gray-50 min-h-screen">
     <header class="visible sticky top-0 z-50" id="home-header">
@@ -627,7 +629,7 @@
           subjectCards.innerHTML = filtered
             .map(
               (s) => `
-              <div class="flex flex-col justify-between border bg-white rounded-lg shadow-lg overflow-hidden h-auto w-11/12">
+              <div class="flex flex-col justify-between border bg-white rounded-lg shadow-lg overflow-hidden h-auto w-11/12" data-aos="zoom-in-up">
                 <div class="p-4">
                   <div class="w-full h-52 flex justify-center">
                     <img src="${s.image}" alt="${s.title}" class="object-contain" />
@@ -696,6 +698,14 @@
 
         // Initially render the full list of subjects
         renderCards();
+      });
+    </script>
+    <!-- AOS Initialize -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
       });
     </script>
   </body>

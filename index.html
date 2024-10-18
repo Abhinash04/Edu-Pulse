@@ -41,6 +41,10 @@
 
   <!-- javascript -->
   <script src="script.js"></script>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body class="bg-purple-50 min-h-[500px]">
@@ -116,16 +120,16 @@
     
     <div class="container mx-auto px-4 py-12 md:py-24 flex flex-col-reverse md:flex-row items-center justify-center">
       <div class="md:w-1/2 space-y-6 text-center md:text-center">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-700">Ace Your Exams</h2>
-        <h3 class="text-5xl md:text-6xl font-bold text-gray-700">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-700" data-aos="zoom-in-up">Ace Your Exams</h2>
+        <h3 class="text-5xl md:text-6xl font-bold text-gray-700" data-aos="zoom-in-up">
           Build your <span class="text-purple-700">future</span>
         </h3>
         <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center">
-          <div class="relative flex-grow">
+          <div class="relative flex-grow" data-aos="zoom-in-up">
             <svg id="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             <input type="text" placeholder="search anything" class="w-full pl-10 pr-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500" />
           </div>
-          <div class="relative">
+          <div class="relative" data-aos="zoom-in-up">
             <select class="appearance-none w-full md:w-48 px-4 py-3 rounded-full border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-700">
               <option>All categories</option>
               <option value="math">Mathematics</option>
@@ -138,7 +142,7 @@
           </div>
         </div>
       </div>
-      <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+      <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center " data-aos="zoom-in-up">
         <img src="https://drive.google.com/thumbnail?id=1WSW_UKk8vdzQi7S-Gz_EH0JRH_IfpvZz&sz=w1026-h1026" alt="Student studying" class="w-[70%] h-[70%]" />
       </div>
     </div>
@@ -149,10 +153,10 @@
   <!-- Courses Section -->
   <section class="feature mt-4" id="subject">
     <div class="container mx-auto px-4 py-8">
-      <h1 class="text-3xl font-bold text-center mb-8">Popular <span class="text-purple-700">Subjects</span></h1>
+      <h1 class="text-3xl font-bold text-center mb-8" data-aos="zoom-in-up">Popular <span class="text-purple-700">Subjects</span></h1>
       <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 subject-cards">
         <!-- Subject Card 1 -->
-        <div class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden">
+        <div class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
           <div class="p-4">
             <img src="https://drive.google.com/thumbnail?id=1feU2yMs5KxrH28ToGs50_gildK8paqlU&sz=w1026-h1026" alt="Real Time System"
               class="w-full h-48 object-cover mb-4" />
@@ -166,7 +170,7 @@
         </div>
 
         <!-- Subject Card 2 -->
-        <div class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden">
+        <div class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
           <div class="p-4">
             <img src="https://drive.google.com/thumbnail?id=1k_MLH2RGtHsg-uBv76JKltN5UVZ4uTlm&sz=w1026-h1026" alt="Design and Analysis of Algorithm"
               class="w-full h-48 object-cover mb-4" />
@@ -180,7 +184,7 @@
         </div>
 
         <!-- Subject Card 3 -->
-        <div class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden">
+        <div class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
           <div class="p-4">
             <img src="https://drive.google.com/thumbnail?id=1eR_hkcznl8KCAWKROkkQPLPjv33fDgqy&sz=w1026-h1026" alt="Digital Electronics"
               class="w-full h-48 object-cover mb-4" />
@@ -194,7 +198,7 @@
         </div>
 
         <!-- Subject Card 4 -->
-        <div class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden">
+        <div class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
           <div class="p-4">
             <img src="https://drive.google.com/thumbnail?id=1ROR8ELN6YDZsLM7mt_cUm634UjHz5cpH&sz=w1026-h1026" alt="Robotics" class="w-full h-48 object-cover mb-4" />
             <p class="text-md font-bold  text-gray-500 text-center">MECH</p>
@@ -207,7 +211,7 @@
         </div>
 
         <!-- Subject Card 5 -->
-        <div class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden">
+        <div class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
           <div class="p-4">
             <img src="https://drive.google.com/thumbnail?id=1sk1h1GbF_jkLEbrfc8NZvNIZGnd0qswl&sz=w1026-h1026" alt="Economics" class="w-full h-48 object-cover mb-4" />
             <p class="text-md font-bold uppercase text-gray-500 text-center">ALL</p>
@@ -220,7 +224,7 @@
         </div>
 
         <!-- Subject Card 6 -->
-        <div class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden">
+        <div class="flex flex-col justify-between border rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
           <div class="p-4">
             <img src="https://drive.google.com/thumbnail?id=1173czQpnNpvCBiDiY9OavsHBsNz1ikaZ&sz=w1026-h1026" alt="Digital Electronics"
               class="w-full h-48 object-cover mb-4" />
@@ -238,8 +242,8 @@
 
     <!-- Departments -->
     <div id="all-department"></div>
-    <div class="container mx-auto px-4 py-8">
-      <h1 class="text-3xl font-bold text-center mb-8">ALL <span class="text-purple-700">Departments</span></h1>
+    <div class="container mx-auto px-4 py-8" data-aos="fade-up">
+      <h1 class="text-3xl font-bold text-center mb-8" data-aos="zoom-in-up">ALL <span class="text-purple-700">Departments</span></h1>
 
       <!-- Swiper Container -->
       <div class="relative">
@@ -248,7 +252,7 @@
 
             <!-- Department Card 1 -->
             <div class="swiper-slide">
-              <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden">
+              <div class="flex-shrink-0 w-72 border rounded-lg shadow-lg overflow-hidden" >
                 <div class="p-4">
                   <img src="https://drive.google.com/thumbnail?id=1HNb6R4q0S1GdcIcZRfiE3vMbftbLW9vM&sz=w1026-h1026" alt="CSE" class="w-full h-48 object-cover mb-4" />
                   <h2 class="text-lg uppercase font-semibold text-center mt-2">
@@ -444,36 +448,36 @@
     <!-- Why Choose Us -->
     <section class="py-16 px-4 md:px-8" id="wcu-heading">
       <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12">
+        <h2 class="text-3xl font-bold text-center mb-12" data-aos="zoom-in-down">
           Why <span class="text-purple-700">Choose us ?</span>
         </h2>
         <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
-          <div class="md:w-1/3">
+          <div class="md:w-1/3" data-aos="fade-right">
             <img src="https://drive.google.com/thumbnail?id=1YybeFLRo-3OwrNCnxx5JyzNIBy3vDF6r" alt="Student thinking" class="w-full h-auto" />
           </div>
-          <div class="md:w-2/3 space-y-6">
+          <div class="md:w-2/3 space-y-6" data-aos="fade-left">
             <div class="flex items-start gap-4 pb-6 border-b border-yellow-400">
               <img src="https://drive.google.com/thumbnail?id=1bZFzdkxf9LeeMNrvh3K2HS4WIWWEp4Ua" alt="Organised study material" class="w-10 h-10 flex-shrink-0" />
-              <div>
+              <div >
                 <h3 class="font-bold text-2xl text-purple-700 mb-2">Organised study material</h3>
                 <p class="text-black text-lg font-semibold">Categorized notes and resources, ensuring students can find what they need quickly, saving valuable study time.</p>
               </div>
             </div>
-            <div class="flex items-start gap-4 pb-6 border-b border-orange-400 font-bold">
+            <div class="flex items-start gap-4 pb-6 border-b border-orange-400 font-bold" data-aos="fade-left">
               <img src="https://drive.google.com/thumbnail?id=17VI-_sy-INv2z2h7S4ud_kfGLPq1NLPL" alt="Accessible Anytime Anywhere" class="w-10 h-10 flex-shrink-0" />
               <div>
                 <h3 class="font-bold text-2xl text-purple-700 mb-2">Accessible Anytime Anywhere</h3>
                 <p class="text-black text-lg font-semibold">Our platform is accessible across devices, ensuring you can study whenever it’s convenient for you.</p>
               </div>
             </div>
-            <div class="flex items-start gap-4 pb-6 border-b border-blue-400">
+            <div class="flex items-start gap-4 pb-6 border-b border-blue-400" data-aos="fade-left">
               <img src="https://drive.google.com/thumbnail?id=1lw6nrHNE4HzECnXP6_VeswFIbjcwOSG2" alt="Regularly Updated Content" class="w-10 h-10 flex-shrink-0" />
               <div>
                 <h3 class="font-bold text-2xl text-purple-700 mb-2">Regularly Updated Content</h3>
                 <p class="text-black text-lg font-semibold">Stay ahead with notes that are constantly updated to reflect the latest academic curriculum and exam patterns.</p>
               </div>
             </div>
-            <div class="flex items-start gap-4">
+            <div class="flex items-start gap-4" data-aos="fade-left">
               <img src="https://drive.google.com/thumbnail?id=1PD3AYhmAdeYrWjuyOi3xROnzsUohtwUA" alt="Support multiple subjects" class="w-10 h-10 flex-shrink-0" />
               <div>
                 <h3 class="font-bold text-2xl text-purple-700 mb-2">Support multiple subjects:</h3>
@@ -490,17 +494,17 @@
     <!-- About Section -->
     <div class="p-8" id="about">
       <div class="max-w-6xl mx-auto">
-        <h1 class="text-3xl font-bold text-center mb-8">About <span class="text-purple-700">EduPulse</span></h1>
+        <h1 class="text-3xl font-bold text-center mb-8" data-aos="zoom-in-up">About <span class="text-purple-700">EduPulse</span></h1>
         <section class="grid grid-cols-1 gap-4 md:grid-cols-3">
-          <article class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+          <article class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300"  data-aos="flip-left">
             <h2 class="text-xl font-bold mb-4 text-purple-700">Our Mission</h2>
             <p>We strive to deliver innovative solutions that empower businesses and individuals to reach their full potential in the digital world.</p>
           </article>
-          <article class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+          <article class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300"  data-aos="flip-left">
             <h2 class="text-xl font-bold mb-4 text-purple-700">Our Team</h2>
             <p>Our diverse team of experts brings together a wealth of knowledge and experience from various fields to tackle complex challenges.</p>
           </article>
-          <article class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+          <article class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300"  data-aos="flip-left">
             <h2 class="text-xl font-bold mb-4 text-purple-700">Our Values</h2>
             <p>Integrity, collaboration, and continuous improvement are at the core of everything we do, guiding our decisions and actions.</p>
           </article>
@@ -511,11 +515,11 @@
 
 
     <!-- Contact Section -->
-    <section class="contact py-16 px-4 md:px-8 lg:px-16" id="contact">
+    <section class="contact py-16 px-4 md:px-8 lg:px-16" id="contact" >
       <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <!-- Left Side -->
-          <div class="space-y-8">
+          <div class="space-y-8"  data-aos="fade-right">
             <div class="space-y-4">
               <h2 class="text-3xl md:text-4xl font-bold text-purple-700 flex items-center">
                 Love to hear from you,
@@ -562,7 +566,7 @@
 
 
           <!-- Right Side - Contact Form -->
-          <div class="bg-white p-8 rounded-lg shadow-md">
+          <div class="bg-white p-8 rounded-lg shadow-md" data-aos="fade-left">
             <h3 class="text-2xl text-purple-700 font-bold mb-6">Send us a message</h3>
             <form class="space-y-4" id="contactForm">
               <div>
@@ -597,7 +601,7 @@
 
 
     <!-- Footer Section -->
-    <footer class="bg-purple-700 text-center py-12 flex flex-col gap-4 rounded-t-[25%] mt-6">
+    <footer class="bg-purple-700 text-center py-12 flex flex-col gap-4 rounded-t-[25%] mt-6" data-aos="fade-up">
       <div class="flex justify-center items-center gap-4">
         <div class="relative flex items-center justify-center">
           <div class="w-12 h-12 bg-[#a77deb] rotate-45 absolute rounded-sm animate-pulse shadow-lg"></div>
@@ -617,5 +621,13 @@
         <p class="text-white font-bold text-md mt-4">© 2024 EduPulse. All rights reserved.</p>
       </div>
     </footer>
+    <!-- AOS Initialize -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+      });
+    </script>
   </body>
 </html>
